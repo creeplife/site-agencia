@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link para o css -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- Icone do site -->
+    <link rel="shortcut icon" href="./assets/img/logo_adega.png" type="image/x-icon">
+
+    <!-- Link da font Montserrat do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Link do script do Swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <!-- Link do script do carrossel -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-element-bundle.min.js"></script>
+
+    <!-- Link para o meu script -->
+    <script src="./assets/js/script.js"></script>
+
+    <!-- Link do AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <!-- Link do BoxIcons -->
+
+    <!-- Basic Icons -->
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css" rel="stylesheet">
+
+    <!-- Filled Icons -->
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/filled/boxicons-filled.min.css" rel="stylesheet">
+
+    <!-- Brand Icons -->
+    <link href="https://cdn.boxicons.com/3.0.8/fonts/brands/boxicons-brands.min.css" rel="stylesheet">
+
+    <!-- Link da CDN do Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+
+    <title>Adega Nebraska</title>
+
+</head>
+
+
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <img src="./assets/img/logo_adega.png" alt="Logo Adega Nebraska">
+            <nav>
+                <a href="#sobre">Sobre Nós</a>
+                <a href="#categorias">Produtos</a>
+                <a href="#carrossel">Destaques</a>
+            </nav>
+            <a href="">
+                <button>
+                    Fazer pedido
+                </button>
+            </a>
+        </div>
+    </header>
+
+
+
+    <main>
+
+
+        <!-- SOBRE NÓS -->
+        <section id="sobre">
+            <h2 class="titulo"> Adega Nebraska</h2>
+
+            <div class="container">
+                <div class="textoSobre">
+
+                    <figure>
+                        <img src="./assets/img/adega.png" alt="Adega Nebraska">
+                    </figure>
+
+                    <h3>Sobre Nós
+                        <hr>
+                    </h3>
+                    <p>
+                        A <span>Adega Nebraska</span> oferece uma grande variedade
+                        de bebidas, produtos de tabacaria e petiscos.
+
+                        Nosso objetivo é oferecer qualidade e praticidade
+                        para nossos clientes.
+                    </p>
+                </div>
+                
+            </div>
+            <div class="boxesContainer">
+
+            <div class="boxes">
+                    <h3><span>Missão</span></h3>
+                    <p>
+                        Oferecer bebidas de qualidade e uma experiência agradável
+                        aos nossos clientes, com atendimento próximo, preços justos
+                        e variedade para todos os momentos.
+                    </p>
+                </div>
+
+                <div class="boxes">
+                    <h3><span>Visão</span></h3>
+                    <p>
+                        Ser uma adega reconhecida pela qualidade, confiança e
+                        excelência no atendimento, tornando-se referência na região.
+                    </p>
+                </div>
+
+                <div class="boxes">
+                    <h3><span>Valores</span></h3>
+                    <p>
+                        <span>Qualidade</span> em rabalhar com produtos de procedência e qualidade.
+                    </p>
+                    <p>
+                        <span>Atendimento</span> é tratar cada cliente com respeito e cordialidade.
+                    </p>
+                    <p>
+                        <span>Confiança</span> em construir relações transparentes e duradouras.
+                    </p>
+                </div></div>
+        </section>
+
+
+        <section id="categorias">
+            <h2 class="titulo">Nossos Produtos
+                <hr>
+            </h2>
+            <div class="container">
+                <div class="box">
+                    <i class='bxr bx-beer'></i>
+                    <h3><span>Bebidas</span></h3>
+                    <p>Bebidas para todos os gostos.</p>
+                </div>
+
+                <div class="box">
+                    <i class='bxr bx-cocktail'></i>
+                    <h3><span>Bebidas sem álcool</span></h3>
+                    <p>Opções de bebidas sem álcool.</p>
+                </div>
+
+                <div class="box">
+                    <i class='bxr bx-cigarette'></i>
+                    <h3><span>Tabacaria</span></h3>
+                    <p>Produtos de tabacaria.</p>
+                </div>
+
+                <div class="box">
+                    <i class='bxr bx-burger'></i>
+                    <h3><span>Petiscos</span></h3>
+                    <p>Petiscos para acompanhar.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- CARROSSEL -->
+<!-- data-aos="zoom-out-left" -->
+        <section id="carrossel">
+            <h2 class="titulo" >Destaques
+                <hr>
+            </h2>
+            <div class="container" data-aos="zoom-out-left">
+                <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" space-between="50"
+                    slides-per-view="2">
+                    <swiper-slide> <img src="./assets/img/bebida1.jpg" alt="Bebidas">
+                        <h3>Bebidas</h3>
+                    </swiper-slide>
+
+
+                    <swiper-slide>
+
+                        <img src="./assets/img/bebida2.jpg" alt="Bebidas sem álcool">
+                        <h3>Bebidas sem álcool</h3>
+                    </swiper-slide>
+
+
+                    <swiper-slide>
+                        <img src="./assets/img/tabacaria.jpg" alt="Tabacaria">
+                        <h3>Tabacaria</h3>
+                    </swiper-slide>
+
+
+                    <swiper-slide>
+                        <img src="./assets/img/petisco.jpg" alt="Petiscos">
+                        <h3>Petiscos</h3>
+                    </swiper-slide>
+                </swiper-container>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        <footer class="footerLogo">
+            <img src="./assets/img/logo_adega.png" alt="Logo Adega Nebraska">
+        </footer>
+        <div class="footerDireitos">© 2026 Adega Nebraska - Todos os direitos reservados.</div>
+
+        <div class="footerContato">Telefone: 11 99999-9999
+            <p>Instagram: @Nebraska</p>
+            <p>Contato: Faça seu pedido conosco!</p>
+        </div>
+    </footer>
+
+
+    <!-- Link AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Inicializador do AOS -->
+    <script>
+        AOS.init();
+    </script>
+
+
+</body>
+<!-- atualizado 16-08 -->
+</html>
