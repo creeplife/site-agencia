@@ -1,0 +1,905 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: var(--cor-texto);
+
+}
+
+
+/* #region O root me ajuda a guardar os estilos do site em variaveis reutilizaveis  */
+:root {
+    /* Variveis de cores  */
+    --cor-fundo: #06020f;
+    --cor-card: #130d26;
+    --cor-titulo: #ffffff;
+    --cor-texto: #a3a1cc;
+    --cor-destaque: #8b5cf6;
+    --cor-brilho: #00f2fe;
+}
+
+/* #endregion */
+
+
+
+/* #region Estilização do selection  */
+::selection {
+    background-color: var(--cor-destaque);
+    color: var(--cor-fundo);
+}
+
+/* #endregion */
+
+/* #region Estilização da scrolbar  */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--cor-card);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--cor-destaque);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--cor-brilho);
+}
+
+/* #endregion */
+
+/* #region Estilização do fundo do site  */
+
+body {
+    /* o DVH (A visualização dinamica de altura) vai pegar os 100% da altura de cada dispositivo  */
+    min-height: 100dvh;
+
+    /* Necessário para futuros elementos posicionados para que utilizem o body como referencia */
+    position: relative;
+    /* Limita e esconde qualquer coisa que ultrapasse os limites do body  */
+    overflow-x: hidden;
+    /* Define as 3 camadas do background fixas  */
+    background-attachment: fixed, fixed, fixed;
+
+    background-color: var(--cor-fundo);
+
+    background-image:
+        /* Camada 1: linhas verticais finas do grid  */
+        linear-gradient(to right, rgba(139, 92, 246, 0.05) 1px, transparent 2px),
+        /* Camada 2: Linhas horizontais finas do grid  */
+        linear-gradient(to bottom, rgba(139, 92, 246, 0.05) 1px, transparent 2px),
+        /* Camada 3: Brilho roxo radial centralizado  */
+        radial-gradient(circle at 93% 20%,
+            #763ec1 0%,
+            #5e28b6 10%,
+            #3a1678 20%,
+            #200d40 30%,
+            #06020f 40%);
+    /* Tamnho da repetição de cada camada, na mesma ordem do background-image acima  */
+    background-size:
+        /* Espaçamento entre as linhas verticais do grid  */
+        150px 150px,
+        /* Espaçamento entre as linhas horizontais do grid  */
+        150px 150px,
+        /* O gradiente ocupa 100% do body */
+        100% 100%;
+
+    /* Define como cada camada vai repetir, na mesma ordem acima */
+    background-repeat:
+        /* Grid vertical se repete infinitamente até cobrir a tela  */
+        repeat,
+        /* Grid horizontal se repete infinitamente até cobrir a tela */
+        repeat,
+        /* o Circulo aparece só uma vez, centralizado sem repetição  */
+        no-repeat;
+}
+
+/* #endregion */
+
+/* #region Estilização da classe container  */
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+/* #endregion */
+
+/* #region Estilização do titulo */
+h2 {
+    font-size: 35px;
+    width: 100%;
+    justify-content: center;
+    text-shadow: 0 0 25px var(--cor-brilho);
+    margin-top: -3%;
+    text-align: center;
+}
+
+h3 {
+    font-size: 25px;
+    width: 100%;
+    justify-content: center;
+    text-shadow: 0 0 25px var(--cor-destaque);
+}
+
+p {
+    text-align: justify;
+    color: var(--cor-texto);
+}
+
+hr {
+    width: 15px;
+    height: 3px;
+    background-color: var(--cor-brilho);
+}
+
+/* #endregion */
+
+
+/* #region Cabeçalho do site  */
+
+/* Efeito de rolagem suave aplicado em toda a página */
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+
+    /* O z index manipula as camadas do elemento */
+    z-index: 9999;
+
+    .container {
+        background-color: #7b3adc29;
+        backdrop-filter: blur(3px);
+        border-radius: 20px;
+        margin-top: 15px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        height: 75px;
+
+        img {
+            width: 75px;
+        }
+
+        nav {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-55%);
+
+            height: 100%;
+            display: flex;
+            align-items: center;
+            gap: 50px;
+
+            a {
+                color: var(--cor-brilho);
+                transition: .15s;
+                font-size: 20px;
+                text-shadow: 0 0 10px var(--cor-destaque);
+
+            }
+
+            a:hover {
+                color: var(--cor-brilho);
+                transform: scale(1.05);
+                text-shadow: 0 0 5px var(--cor-destaque),
+                    0 0 20px var(--cor-destaque),
+                    0 0 20px var(--cor-destaque);
+            }
+        }
+    }
+
+    .header-botao {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 15px;
+        border-radius: 7px;
+        border: 3px solid var(--cor-destaque);
+        color: var(--cor-brilho);
+        background-color: transparent;
+        transition: 0.3s;
+    }
+
+    .header-botao:hover {
+        background-color: var(--cor-destaque);
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+
+}
+
+/* #region animação */
+
+/* Animação do logo que flutua no home, aumentando e diminuindo de tamanho */
+@keyframes floating {
+
+    0%,
+    100% {
+        transform: scale(0px);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+}
+
+/* Animação do cursor que pisca ao lado do texto  */
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* #endregion */
+
+main {
+    padding-top: 10%;
+
+    #home {
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+            figure {
+                width: 40%;
+                height: 100%;
+
+                /* Metodo do flexbox para centralizar  */
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                position: sticky;
+                top: 100px;
+
+                img {
+                    width: 400px;
+                    animation: floating 10s ease-in-out infinite;
+                }
+            }
+
+            .home-txt {
+                width: 60%;
+                height: 100%;
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                flex-direction: column;
+
+                p {
+                    margin: 20px;
+                }
+
+                a {
+                    width: 40%;
+                    height: 15%;
+                    margin-top: -3%;
+
+                    button {
+                        width: 35%;
+                        background: transparent;
+                        border: 1px solid var(--cor-destaque);
+                        border-radius: 7px;
+                        color: var(--cor-brilho);
+                        font-size: 15px;
+                        transition: .5s;
+                    }
+
+                    button:hover {
+                        background-color: var(--cor-destaque);
+                        cursor: pointer;
+                        transform: scale(1.1);
+
+                    }
+
+                }
+
+
+                h1 {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: left;
+                    color: var(--cor-destaque);
+                    font-size: 50px;
+
+                    /* Sombra para o texto  */
+                    text-shadow: 0 0 25px var(--cor-destaque);
+
+                    span {
+                        margin-left: 50px;
+                        font-size: 25px;
+                        letter-spacing: 1px;
+                        min-height: 50px;
+
+                        /* largura baseada na quantidade de caracteres  */
+                        width: 26ch;
+                        justify-content: flex-start;
+                        white-space: flex-start;
+                        overflow: hidden;
+                    }
+
+                    span::after {
+                        content: "";
+                        display: inline-block;
+                        width: 10px;
+                        height: 1.1em;
+                        background: var(--cor-destaque);
+                        animation: blink 0.8s step-end infinite;
+
+                    }
+                }
+
+                p {
+                    font-size: 20px;
+                    margin: 5% 0 5% 0;
+                }
+            }
+
+
+
+        }
+
+
+    }
+
+    #sobre {
+        padding-top: 10%;
+
+        .container {
+            width: 100%;
+            display: flex;
+            align-items: stretch;
+            justify-content: space-evenly;
+            flex-direction: column;
+
+            h3,
+            hr {
+                margin-bottom: 1%;
+            }
+
+            .textoSobre {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            figure {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 5px;
+            }
+
+            button {
+                width: 15%;
+                background: transparent;
+                border: 1px solid var(--cor-destaque);
+                border-radius: 7px;
+                color: var(--cor-brilho);
+                font-size: 15px;
+                transition: .5s;
+                margin-top: 1%;
+            }
+
+            button:hover {
+                background-color: var(--cor-destaque);
+                cursor: pointer;
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+/* CARROSEL */
+#categorias {
+    width: 100%;
+    height: 600px;
+    margin-top: 5%;
+
+    .container {
+        height: 100%;
+
+        swiper-container {
+            width: 100%;
+            height: 500px;
+            padding: 30px;
+
+            display: flex;
+            flex-direction: row;
+            overflow: hidden;
+            box-sizing: border-box;
+
+            swiper-slide {
+                display: flex;
+                height: 380px;
+                margin: 0;
+
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                border: 3px solid var(--cor-destaque);
+                border-radius: 30px;
+                overflow: hidden;
+
+                transform: scale(0.95);
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                }
+
+                h3 {
+                    width: 100%;
+                    display: flex;
+                    height: 100px;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 20px;
+                }
+
+                h2 {
+                    justify-content: center;
+                    text-shadow: 0 0 25px var(--cor-brilho);
+                    margin-top: -3%;
+
+                    span {
+                        margin-left: 50px;
+                        font-size: 25px;
+                        letter-spacing: 1px;
+                        min-height: 50px;
+
+                    }
+
+                    span::after {
+                        content: "";
+                        display: inline-block;
+                        width: 10px;
+                        height: 1.1em;
+                        background: var(--cor-destaque);
+                        animation: blink 0.8s step-end infinite;
+                    }
+
+                }
+            }
+
+            swiper-slide:hover {
+                transform: scale(1);
+                border-color: var(--cor-brilho);
+                box-shadow: 0 0 10px var(--cor-destaque),
+                    0 0 20px var(--cor-destaque);
+
+                transition: 0.3s;
+                border-radius: 10%;
+            }
+        }
+
+    }
+}
+
+#diferenciais,
+#como-funciona {
+    padding: 60px 20px;
+}
+
+.subtitulo-secao {
+    text-align: center;
+    color: var(--cor-texto);
+    margin-bottom: 40px;
+    font-size: 18px;
+}
+
+/* Estrutura de Grid para os Diferenciais (2x2 na tela grande) */
+.grid-diferenciais {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card-diferencial {
+    background-color: var(--cor-card);
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.icone-diferencial i {
+    font-size: 40px;
+    color: var(--cor-destaque);
+    margin-bottom: 15px;
+}
+
+/* Linha do tempo horizontal para o Como Funciona */
+.container-etapas {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* Permite quebrar linha no celular */
+}
+
+.etapa-bloco {
+    flex: 1;
+    min-width: 200px;
+    background-color: var(--cor-card);
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.etapa-numero {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--cor-destaque);
+    margin-bottom: 10px;
+}
+
+.seta-passo {
+    font-size: 30px;
+    color: var(--cor-destaque);
+    padding: 0 10px;
+}
+
+#projetos {
+    padding: 60px 20px;
+}
+
+.container-carrossel {
+    padding-bottom: 40px;
+    /* Espaço para as bolinhas da paginação */
+}
+
+/* Customização dos elementos internos do Swiper Container */
+.carrossel-projetos {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilização do card individual de projeto */
+.card-projeto {
+    background-color: var(--cor-card);
+    border-radius: 12px;
+    overflow: hidden;
+    /* Garante que a imagem respeite o arredondamento */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card-projeto:hover {
+    transform: translateY(-5px);
+    border-color: var(--cor-destaque);
+}
+
+/* Área da imagem real do projeto */
+.imagem-projeto img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Área cinza de placeholder enquanto você não tem outros projetos prontos */
+.imagem-projeto-mock {
+    width: 100%;
+    height: 220px;
+    background-color: #1e293b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.imagem-projeto-mock i {
+    font-size: 60px;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+/* Textos e Botão dentro do card */
+.info-projeto {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-grow: 1;
+}
+
+.info-projeto h3 {
+    color: var(--cor-titulo);
+    font-size: 20px;
+}
+
+.info-projeto p {
+    color: var(--cor-texto);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Botão Link do Projeto */
+.btn-projeto {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--cor-destaque);
+    border: 1px solid var(--cor-destaque);
+    padding: 10px 15px;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 600;
+    margin-top: auto;
+    /* Força o botão a ficar fixado na base do card */
+    transition: all 0.3s ease;
+}
+
+.btn-projeto:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-fundo);
+}
+
+/* Tag genérica para projetos em andamento */
+.tag-projeto {
+    display: inline-block;
+    align-self: flex-start;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--cor-texto);
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-top: auto;
+}
+
+/* Estilo para mudar a cor das bolinhas de paginação do Swiper */
+.swiper-container::part(bullet-active) {
+    background-color: var(--cor-destaque);
+}
+
+/* Configurações básicas da seção */
+#contato {
+    padding: 80px 20px;
+    background-color: rgba(255, 255, 255, 0.02);
+    /* Leve variação de fundo */
+}
+
+/* Alinhamento em duas colunas no computador */
+.container-contato {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* Coluna de Texto (Esquerda) */
+.texto-contato {
+    flex: 1;
+}
+
+.titulo-lateral {
+    font-size: 42px;
+    color: var(--cor-titulo);
+    margin-bottom: 20px;
+    text-shadow: 0 0 20px rgba(0, 242, 254, 0.2);
+}
+
+.titulo-lateral hr {
+    width: 60px;
+    height: 3px;
+    border: none;
+    background-color: var(--cor-destaque);
+    margin-top: 10px;
+}
+
+.texto-contato p {
+    color: var(--cor-texto);
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Ícones de informações diretas */
+.info-direta {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.item-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--cor-titulo);
+    font-size: 16px;
+}
+
+.item-info i {
+    font-size: 24px;
+    color: var(--cor-destaque);
+}
+
+/* Coluna do Formulário em formato de Card (Direita) */
+.formulario-contato {
+    flex: 1;
+    background-color: var(--cor-card);
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Elementos do Formulário */
+.campo-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.campo-grupo label {
+    color: var(--cor-titulo);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.campo-grupo input,
+.campo-grupo textarea {
+    background-color: #111827;
+    /* Fundo mais escuro para os inputs */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    padding: 12px 15px;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.campo-grupo input:focus,
+.campo-grupo textarea:focus {
+    outline: none;
+    border-color: var(--cor-destaque);
+}
+
+/* Botão de Envio */
+.btn-enviar {
+    width: 100%;
+    background-color: var(--cor-destaque);
+    color: var(--cor-fundo);
+    border: none;
+    padding: 15px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.btn-enviar:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+
+
+
+
+
+footer {
+    background-color: #03050a;
+    /* Tom ligeiramente mais escuro que o fundo */
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 60px 20px 20px 20px;
+}
+
+.container-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+/* Coluna 1: Logo e Resumo */
+.footer-coluna-logo {
+    flex: 2;
+    min-width: 250px;
+}
+
+.footer-coluna-logo p {
+    color: var(--cor-texto);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 15px;
+    max-width: 320px;
+}
+
+/* Colunas de Links e Redes */
+.footer-coluna-links,
+.footer-coluna-redes {
+    flex: 1;
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+footer h4 {
+    color: var(--cor-titulo);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.footer-coluna-links a {
+    color: var(--cor-texto);
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-coluna-links a:hover {
+    color: var(--cor-destaque);
+}
+
+/* Ícones de Redes Sociais */
+.redes-icones {
+    display: flex;
+    gap: 15px;
+}
+
+.redes-icones a {
+    width: 40px;
+    height: 40px;
+    background-color: var(--cor-card);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cor-titulo);
+    font-size: 20px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.redes-icones a:hover {
+    color: var(--cor-fundo);
+    background-color: var(--cor-destaque);
+    transform: translateY(-3px);
+}
+
+/* Linha de Direitos Autorais */
+.footer-direitos {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 20px;
+}
+
+.footer-direitos p {
+    color: var(--cor-texto);
+    font-size: 12px;
+}
