@@ -619,3 +619,93 @@ footer {
         }
     }
 }
+
+#contato {
+    width: 100%;
+    min-height: 600px;
+    padding: 80px 20px;
+    box-sizing: border-box;
+}
+
+#contato .container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#contato h1 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#contato .container > p {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#contato form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#contato .campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#contato label {
+    font-weight: 600;
+}
+
+#contato input,
+#contato textarea {
+    width: 100%;
+    padding: 14px;
+    box-sizing: border-box;
+
+    background-color: var(--cor-card);
+    color: white;
+
+    border: 1px solid var(--cor-destaque);
+    border-radius: 10px;
+
+    font-family: "Montserrat", sans-serif;
+    outline: none;
+}
+
+#contato input:focus,
+#contato textarea:focus {
+    border-color: var(--cor-brilho);
+    box-shadow: 0 0 10px var(--cor-destaque);
+}
+
+#contato textarea {
+    resize: vertical;
+}
+
+#contato button {
+    padding: 14px 25px;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: var(--cor-destaque);
+    color: white;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#contato button:hover {
+    box-shadow:
+        0 0 10px var(--cor-destaque),
+        0 0 20px var(--cor-destaque);
+
+    transform: scale(1.02);
+}

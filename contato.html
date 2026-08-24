@@ -4,43 +4,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Link para o css  -->
+
+    <!-- Link para o CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
-    <!-- Icone do site  -->
+
+    <!-- Ícone do site -->
     <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
 
-    <!-- Link da font montserrat do google fonts  -->
+    <!-- Google Fonts - Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
-    <!-- Link do boxIcons (CDN público jsDelivr) -->
-    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <!-- BoxIcons -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css"
+        rel="stylesheet">
 
-    <!-- Link do aos -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- AOS -->
+    <link
+        href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+        rel="stylesheet">
 
-    <!-- Link da CDN do swiper  -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-
-    <title>NEXO Web</title>
+    <title>NEXO Web - Contato</title>
 </head>
 
 <body>
-    <form action="https://api.web3forms.com/submit" method="POST">
-        <input type="hidden" name="access_key" value="d2591170-7ac7-4757-8c9d-517b4a24d63e">
-        <input type="text" name="name" required>
-        <input type="email" name="email" required>
-        <textarea name="message" required></textarea>
-        <button type="submit">Submit</button>
-    </form>
+
+    <!-- HEADER -->
+    <header>
+        <!-- COLE AQUI O MESMO HEADER DO SEU index.html -->
+    </header>
 
 
-        <footer>
+    <!-- CONTATO -->
+    <main>
+
+        <section id="contato">
+
+            <div class="container">
+
+                <h1>Entre em contato</h1>
+
+                <p>
+                    Preencha o formulário abaixo e fale com a NEXO Web.
+                </p>
+
+                <form action="https://api.web3forms.com/submit" method="POST">
+
+                    <input type="hidden" name="access_key"
+                        value="d2591170-7ac7-4757-8c9d-517b4a24d63e">
+
+                    <div class="campo">
+                        <label for="name">Nome</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Digite seu nome"
+                            required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Digite seu e-mail"
+                            required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="subject">Assunto</label>
+                        <input
+                            type="text"
+                            id="subject"
+                            name="subject"
+                            placeholder="Digite o assunto"
+                            required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="message">Mensagem</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="6"
+                            placeholder="Digite sua mensagem"
+                            required></textarea>
+                    </div>
+
+                    <button type="submit">
+                        Enviar mensagem
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
         <div class="footerLogo">
-            <img src="./assets/img/header.png" alt="Logo NW">
-            <p>2026 NEXO Web - Todos os direitos reservados.</p>
+            <img src="./assets/img/header.png" alt="Logo NEXO Web">
+
+            <p>
+                2026 NEXO Web - Todos os direitos reservados.
+            </p>
         </div>
 
         <div class="footerContato">
@@ -48,7 +126,9 @@
             <p>Instagram: @nexoweb</p>
             <p>Contato: Faça seu pedido conosco!</p>
         </div>
+
     </footer>
+
 </body>
 
 </html>
