@@ -4,15 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Link para o css  -->
-    <link rel="stylesheet" href="./assets/css/style.css">
+
     <!-- Icone do site  -->
     <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
 
     <!-- Link da font montserrat do google fonts  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
         rel="stylesheet">
 
     <!-- Link do boxIcons (CDN público jsDelivr) -->
@@ -24,13 +24,15 @@
     <!-- Link da CDN do swiper  -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 
+    <!-- Link para o css  -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
     <title>NEXO Web</title>
 </head>
 
 <body>
     <div id="topo"></div>
     <header>
-
 
         <div class="container">
             <a href="#topo">
@@ -109,9 +111,9 @@
             <h2 class="titulo"><span>Serviços</span>
             </h2>
             <div class="container-full">
-                <!-- Fechamento das tags corrigido internamente -->
+
                 <swiper-container class="mySwiper" pagination="true" pagination-clickable="true" space-between="50"
-                    slides-per-view="2" autoplay="true" mousewheel="true" loop="true">
+                    slides-per-view="2" autoplay="true" mousewheel="false" loop="true">
 
                     <swiper-slide>
                         <div class="box">
@@ -156,7 +158,6 @@
             </div>
         </section>
 
-        <!-- SEÇÃO 04: POR QUE A NEXO? (DIFERENCIAIS) -->
         <section id="diferenciais">
             <h2 class="titulo">Por que a NEXO?
                 <hr>
@@ -204,13 +205,35 @@
 
     </main>
 
-    <!-- Scripts de Inicialização -->
-    <script src="https://unpkg.com"></script>
+    <footer>
+        <div class="footerLogo">
+            <img src="./assets/img/header.png" alt="Logo NW">
+            <p>2026 NEXO Web - Todos os direitos reservados.</p>
+        </div>
+
+        <div class="footerContato">
+            <p>Telefone: 11 99999-9999</p>
+            <p>Instagram: @nexoweb</p>
+            <p>Contato: Faça seu pedido conosco!</p>
+        </div>
+    </footer>
+
+
+    <!-- __________Links do JS e sei lá o que__________ -->
+
+    <!-- Link AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Inicializador do AOS -->
     <script>
         AOS.init();
     </script>
-    <!-- Script do Element Bundle necessário para as tags <swiper-container> -->
-    <script src="https://jsdelivr.net"></script>
-    <!-- Seu Script Local -->
+
+    <!-- Link do script do carrossel -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-element-bundle.min.js"></script>
+
+    <!-- Link para o meu script -->
     <script src="./assets/js/script.js"></script>
 </body>
+
+</html>
