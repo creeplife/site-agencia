@@ -109,8 +109,8 @@ body {
 .container {
     width: 100%;
     max-width: 1400px;
-    margin: 0 auto;
     height: 100%;
+    margin: 0 auto;
 }
 
 .container-full {
@@ -152,12 +152,11 @@ hr {
 
 /* #endregion */
 
-
-
 /* #region Efeito de rolagem suave aplicado em toda a página */
 html {
     scroll-behavior: smooth;
 }
+
 /* #endregion */
 
 /* #region Cabeçalho do site  */
@@ -232,11 +231,10 @@ header {
     }
 
 }
+
 /* #endregion */
 
-/* #region animação */
-
-/* Animação do logo que flutua no home, aumentando e diminuindo de tamanho */
+/* #region Animação do logo que flutua no home, aumentando e diminuindo de tamanho */
 @keyframes floating {
 
     0%,
@@ -264,6 +262,7 @@ header {
 
 /* #endregion */
 
+/* #region Estilização do main, que contem todas as seções do site */
 main {
     padding-top: 10%;
     margin-bottom: 10%;
@@ -302,6 +301,7 @@ main {
 
                 p {
                     margin: 20px;
+                    font-size: 18;
                 }
 
                 a {
@@ -357,9 +357,11 @@ main {
 
     #sobre {
         width: 100%;
-        padding-top: 10%;
+        padding-top: 5%;
 
         .container-full {
+            margin-top: 2%;
+
             width: 100%;
             display: flex;
             align-items: stretch;
@@ -367,10 +369,16 @@ main {
             justify-content: center;
 
             h3,
-            hr,
+            hr{
+                margin-bottom: 1%;
+                text-align: center;
+                                font-size: 30px;
+
+            }
             p {
                 margin-bottom: 1%;
                 text-align: center;
+                font-size: 18px;
             }
 
             .textoSobre {
@@ -434,44 +442,48 @@ main {
             .boxes:hover {
                 transform: scale(1.05);
                 border-color: var(--cor-brilho);
-                box-shadow: 0 0 25px rgba(246, 96, 45, 0.3);
+                box-shadow: var(--cor-destaque) 0px 0px 25px;
             }
         }
 
     }
 
     /* CARROSEL */
-    #categorias {
+    #servicos {
         width: 100%;
         margin-top: 7%;
+        min-height: 500px;
 
-        .container-full {
-            height: 100%;
+
+        .container {
+            width: 100%;
 
             swiper-container {
                 margin-top: 2%;
                 width: 100%;
-                height: 400px;
-
-                display: flex;
-                flex-direction: row;
-                box-sizing: border-box;
-                margin-bottom: 10%;
+                height: 325px;
+                display: block;
 
                 swiper-slide {
-                    display: flex;
-                    height: 380px;
+                    width: 450px;
+                    height: 275px;
 
+                    margin: 0 auto;
+
+                    display: flex;
+                    align-items: center;
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
 
                     border: 3px solid var(--cor-destaque);
-                    border-radius: 30px;
-                    overflow: hidden;
+                    border-radius: 20px;
 
-                    transform: scale(0.95);
-                    transition: 0.3s;
+                    opacity: 0.35;
+                    filter: blur(5px);
+                    transform: scale(0.82);
+
+                    transition: all 0.5s ease;
 
                     p {
                         display: flex;
@@ -479,36 +491,40 @@ main {
                     }
 
                     h3 {
+                        width: 100%;
                         display: flex;
+                        height: 100px;
+                        align-items: center;
                         justify-content: center;
-                        text-shadow: 0 0 25px var(--cor-brilho);
-                        /* margin-top: -3%; */
-                        margin-top: 10px;
+                        font-size: 20px;
 
                         span {
-                            margin-left: 50px;
+                            margin-left: 0;
                             font-size: 25px;
                             letter-spacing: 1px;
                             min-height: 50px;
                         }
-
-                        span::after {
-                            content: "";
-                            width: 10px;
-                            height: 1.1em;
-                            background: var(--cor-destaque);
-                            animation: blink 0.8s step-end infinite;
-                        }
                     }
                 }
 
-                swiper-slide:hover {
+                swiper-slide.swiper-slide-active {
+                    opacity: 1;
+                    filter: blur(0);
                     transform: scale(1);
+                    z-index: 2;
+
+                    box-shadow:
+                        0 0 15px var(--cor-destaque),
+                }
+
+                swiper-slide:hover {
                     border-color: var(--cor-brilho);
-                    box-shadow: 0 0 10px var(--cor-destaque),
-                        0 0 20px var(--cor-destaque);
-                    transition: 0.3s;
+                    box-shadow:
+                        0 0 5px var(--cor-destaque),
+                        0 0 10px var(--cor-destaque);
+
                     border-radius: 10%;
+                    transition: 0.3s;
                 }
 
                 .box {
@@ -518,18 +534,36 @@ main {
                     background-color: transparent;
                     border-radius: 10px;
                     text-align: center;
-                    transition: 0.3s;
+                    transition: all 0.5s ease;
 
                     i {
                         display: block;
                         font-size: 30px;
                         color: var(--cor-brilho);
                     }
+
+                    p {
+                        display: block;
+                        text-align: center;
+                        padding: 20px;
+                    }
                 }
 
+
+            }
+
+            swiper-container::part(bullet) {
+                background: var(--cor-destaque);
+                width: 25px;
+                height: 3px;
+                border-radius: 5px;
+            }
+
+            swiper-container::part(bullet-active) {
+                background: var(--cor-brilho);
+                width: 40px;
             }
         }
-
     }
 
     #diferenciais,
@@ -551,18 +585,89 @@ main {
         }
 
         .card-diferencial {
-            background-color: var(--cor-card);
+            height: 300px;
+            position: relative;
+            perspective: 1000px;
+        }
+
+        .card-frente,
+        .card-verso {
+            position: absolute;
+
+            width: 100%;
+            height: 100%;
+
             padding: 30px;
+
+            background-color: var(--cor-card);
+
             border-radius: 8px;
-            text-align: center;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            backface-visibility: hidden;
+
+            transition: transform 0.6s ease;
+            border: 1px solid transparent;
+        }
+
+        .card-frente {
+            transform: rotateY(0deg);
+        }
+
+        .card-verso {
+
+            transform: rotateY(180deg);
+            border-color: var(--cor-destaque);
+        }
+
+        .card-diferencial:hover .card-frente {
+            transform: rotateY(180deg);
+        }
+
+        .card-diferencial:hover .card-verso {
+            transform: rotateY(0deg);
         }
 
         .icone-diferencial i {
             font-size: 40px;
             color: var(--cor-destaque);
             margin-bottom: 15px;
+            text-shadow: 0 0 15px var(--cor-destaque);
+        }
+
+        h3 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        p {
+            text-align: center;
         }
     }
+    button {
+                align-self: center;
+                display: block;
+
+                width: 25%;
+                background-color: var(--cor-destaque);
+                border: 1px solid var(--cor-destaque);
+                border-radius: 7px;
+                color: var(--cor-brilho);
+                font-size: 15px;
+                transition: .5s;
+                margin: 30px auto 0 auto;
+
+
+            }
+
+            button:hover {
+                cursor: pointer;
+                transform: scale(1.1);
+            }
 
     #projetos {
         padding: 60px 20px;
@@ -574,7 +679,7 @@ footer {
     background-color: #7b3adc29;
     padding: 20px;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: var(--fonte-principal);
 
     display: flex;
     justify-content: center;
@@ -620,92 +725,187 @@ footer {
     }
 }
 
+/*#endregion Estilização do main, que contem todas as seções do site */
+
+/* #region AQUI INICIA A PAGINA DE CONTATO, COM FORMULÁRIO E ESTILIZAÇÃO DO MESMO */
+
 #contato {
     width: 100%;
     min-height: 600px;
-    padding: 80px 20px;
-    box-sizing: border-box;
-}
-
-#contato .container {
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-#contato h1 {
-    text-align: center;
-    margin-bottom: 15px;
-}
-
-#contato .container > p {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-#contato form {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-#contato .campo {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-#contato label {
-    font-weight: 600;
-}
-
-#contato input,
-#contato textarea {
-    width: 100%;
-    padding: 14px;
     box-sizing: border-box;
 
-    background-color: var(--cor-card);
-    color: white;
+    .container-full {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
 
-    border: 1px solid var(--cor-destaque);
-    border-radius: 10px;
+        gap: 50px;
 
-    font-family: "Montserrat", sans-serif;
-    outline: none;
+        h1 {
+            font-size: 40px;
+            color: var(--cor-destaque);
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+        }
+
+        form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .campo {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+
+                label {
+                    font-weight: 600;
+                    text-align: left;
+                }
+
+                input,
+                textarea {
+
+                    width: 100%;
+                    padding: 14px;
+                    box-sizing: border-box;
+
+                    background-color: var(--cor-card);
+                    color: var(--cor-brilho);
+
+                    border: 1px solid var(--cor-destaque);
+                    border-radius: 10px;
+
+                    font-family: var(--fonte-principal);
+                }
+
+
+                input:focus,
+                textarea:focus {
+
+                    border-color: var(--cor-brilho);
+
+                    box-shadow: 0 0 10px var(--cor-destaque);
+                }
+
+
+                textarea {
+                    resize: vertical;
+                }
+            }
+
+            button {
+
+                padding: 14px 25px;
+
+                border: none;
+                border-radius: 10px;
+
+                background-color: var(--cor-destaque);
+                color: var(--cor-brilho);
+
+                font-family: var(--fonte-principal);
+                font-size: 16px;
+                font-weight: 600;
+
+                cursor: pointer;
+
+                transition: 0.3s;
+            }
+
+            button:hover {
+
+                box-shadow:
+                    0 0 10px var(--cor-destaque),
+                    0 0 20px var(--cor-destaque);
+
+                transform: scale(1.02);
+            }
+        }
+
+
+
+
+        figure {
+            width: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            margin-bottom: 5px;
+
+            img {
+                width: 600px;
+                max-width: 90%;
+                margin-top: -40px;
+                animation: floating 4s ease-in-out infinite;
+            }
+        }
+    }
 }
 
-#contato input:focus,
-#contato textarea:focus {
-    border-color: var(--cor-brilho);
-    box-shadow: 0 0 10px var(--cor-destaque);
+/* #endregion AQUI TERMINA A PAGINA DE CONTATO, COM FORMULÁRIO E ESTILIZAÇÃO DO MESMO */
+
+
+/* #region AQUI INICIA A PAGINA SOBRE, COM ESTILIZAÇÃO DO MESMO */
+#sobre-pag {
+
+    width: 100%;
+    min-height: 600px;
+
+    h3 {
+        width: 50%;
+        margin: auto;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .texto1{
+        text-align: justify;
+        font-size: 18px;
+    }
+
+    .texto2{
+        margin-right: auto;
+
+        text-align: right;
+        font-size: 20px;
+    }
+
+    p{
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .boxesContainer {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 25px;
+        margin-top: 30px;
+
+        .boxes {
+            width: 500px;
+            min-height: 70px;
+            padding: 30px 15px;
+            background-color: var(--cor-card);
+            border: 1px solid var(--cor-destaque);
+            border-radius: 10px;
+            text-align: center;
+            transition: 0.5s;
+        }
+
+        .boxes:hover {
+            transform: scale(1.05);
+            border-color: var(--cor-brilho);
+            box-shadow: var(--cor-destaque) 0px 0px 25px;
+        }
+    }
 }
 
-#contato textarea {
-    resize: vertical;
-}
 
-#contato button {
-    padding: 14px 25px;
-
-    border: none;
-    border-radius: 10px;
-
-    background-color: var(--cor-destaque);
-    color: white;
-
-    font-family: "Montserrat", sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-#contato button:hover {
-    box-shadow:
-        0 0 10px var(--cor-destaque),
-        0 0 20px var(--cor-destaque);
-
-    transform: scale(1.02);
-}
+/* #endregion AQUI TERMINA A PAGINA SOBRE, COM ESTILIZAÇÃO DO MESMO */
