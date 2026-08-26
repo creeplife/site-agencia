@@ -5,66 +5,572 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Link para o CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-
     <!-- Ícone do site -->
     <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
 
-    <!-- Google Fonts - Montserrat -->
+    <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
         rel="stylesheet">
 
-    <!-- BoxIcons -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css"
-        rel="stylesheet">
+    <!-- Boxicons -->
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
     <!-- AOS -->
-    <link
-        href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <title>NEXO Web - Contato</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <title>Serviços | NEXO Web</title>
 </head>
 
-<body><!-- ACESSIBILIDADE EM LIBRAS -->
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-        </div>
-    </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
+<body>
+
+    <!-- HEADER -->
 
     <header>
+
         <div class="container">
-            <a href="./index.html">
+
+            <a href="./index.html" aria-label="NEXO Web - Página inicial">
                 <img src="./assets/img/favicon.png" alt="NEXO Web">
             </a>
-            <nav>
+
+            <nav aria-label="Navegação principal">
+
                 <a href="./sobre.html">Sobre</a>
-                <a href="./servicos.html">Serviços</a>
-                <a href="./como-funciona.html">Como Funciona</a>
-                <a href="./projetos.html">Projetos</a>
+
+                <a href="./servicos.html" aria-current="page">
+                    Serviços
+                </a>
+
+                <a href="./como-funciona.html">
+                    Como Funciona
+                </a>
+
+                <a href="./projetos.html">
+                    Projetos
+                </a>
+
             </nav>
 
             <div class="header-botao">
-                <a href="./contato.html" class="btn-header">Fale Conosco</a>
+                <a href="./contato.html" class="btn-header">
+                    Fale Conosco
+                </a>
             </div>
+
         </div>
+
     </header>
-    
+
+
     <main>
 
+        <!-- HERO -->
 
+        <section id="servicos-hero">
+
+            <div class="container-full">
+
+                <h1 class="titulo">
+                    Soluções digitais para o seu negócio
+                </h1>
+
+                <hr>
+
+                <p>
+                    Criamos experiências digitais pensadas para apresentar sua empresa,
+                    conectar você aos seus clientes e gerar novas oportunidades.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- SITES INSTITUCIONAIS -->
+
+        <section id="sites-institucionais">
+
+            <div class="container-full">
+
+                <h2 class="titulo">
+                    Sites Institucionais
+                </h2>
+
+                <hr>
+
+                <div class="servico-conteudo">
+
+                    <div class="servico-texto">
+
+                        <h3>O que é?</h3>
+
+                        <p>
+                            Um site profissional para apresentar sua empresa
+                            na internet, transmitir credibilidade e facilitar
+                            o contato com seus clientes.
+                        </p>
+
+                        <h3>Ideal para</h3>
+
+                        <ul>
+                            <li>Empresas</li>
+                            <li>Pequenos negócios</li>
+                            <li>Prestadores de serviços</li>
+                            <li>Profissionais autônomos</li>
+                        </ul>
+
+                    </div>
+
+                    <div class="servico-texto">
+
+                        <h3>Pode incluir</h3>
+
+                        <ul>
+                            <li>Página inicial</li>
+                            <li>Sobre</li>
+                            <li>Serviços</li>
+                            <li>Contato</li>
+                            <li>WhatsApp</li>
+                            <li>Google Maps</li>
+                            <li>Redes sociais</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- LANDING PAGES -->
+
+        <section id="landing-pages">
+
+            <div class="container-full">
+
+                <h2 class="titulo">
+                    Landing Pages
+                </h2>
+
+                <hr>
+
+                <div class="servico-conteudo">
+
+                    <div class="servico-texto">
+
+                        <h3>O que é?</h3>
+
+                        <p>
+                            Uma página criada com um objetivo específico,
+                            como divulgar uma oferta, apresentar um produto
+                            ou transformar visitantes em oportunidades.
+                        </p>
+
+                    </div>
+
+                    <div class="servico-texto">
+
+                        <h3>Ideal para</h3>
+
+                        <ul>
+                            <li>Campanhas</li>
+                            <li>Produtos</li>
+                            <li>Serviços</li>
+                            <li>Anúncios</li>
+                            <li>Captação de clientes</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CATÁLOGOS DIGITAIS -->
+
+        <section id="catalogos">
+
+            <div class="container-full">
+
+                <h2 class="titulo">
+                    Catálogos Digitais
+                </h2>
+
+                <hr>
+
+                <div class="servico-conteudo">
+
+                    <div class="servico-texto">
+
+                        <h3>O que é?</h3>
+
+                        <p>
+                            Uma forma organizada, visual e acessível de
+                            apresentar seus produtos ou serviços para
+                            seus clientes.
+                        </p>
+
+                    </div>
+
+                    <div class="servico-texto">
+
+                        <h3>Ideal para</h3>
+
+                        <ul>
+                            <li>Adegas</li>
+                            <li>Restaurantes</li>
+                            <li>Lojas</li>
+                            <li>Salões</li>
+                            <li>Pequenos comércios</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- INTEGRAÇÕES -->
+
+        <section id="integracoes">
+
+            <div class="container-full">
+
+                <h2 class="titulo">
+                    Integrações
+                </h2>
+
+                <hr>
+
+                <p class="servico-intro">
+                    Conectamos seu site às ferramentas que fazem parte
+                    da rotina do seu negócio.
+                </p>
+
+                <div class="servicos-grid">
+
+                    <article class="servico-card">
+
+                        <i class="bx bxl-whatsapp"></i>
+
+                        <h3>WhatsApp</h3>
+
+                        <p>
+                            Facilite o contato entre seus clientes e sua empresa.
+                        </p>
+
+                    </article>
+
+                    <article class="servico-card">
+
+                        <i class="bx bx-map"></i>
+
+                        <h3>Google Maps</h3>
+
+                        <p>
+                            Mostre a localização da sua empresa de forma prática.
+                        </p>
+
+                    </article>
+
+                    <article class="servico-card">
+
+                        <i class="bx bxl-instagram"></i>
+
+                        <h3>Instagram</h3>
+
+                        <p>
+                            Conecte seu site às suas redes sociais.
+                        </p>
+
+                    </article>
+
+                    <article class="servico-card">
+
+                        <i class="bx bx-edit"></i>
+
+                        <h3>Formulários</h3>
+
+                        <p>
+                            Facilite o envio de informações e pedidos de contato.
+                        </p>
+
+                    </article>
+
+                    <article class="servico-card">
+
+                        <i class="bx bx-share-alt"></i>
+
+                        <h3>Redes sociais</h3>
+
+                        <p>
+                            Integre seus canais digitais ao seu site.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MANUTENÇÃO -->
+
+        <section id="manutencao">
+
+            <div class="container-full">
+
+                <h2 class="titulo">
+                    Manutenção
+                </h2>
+
+                <hr>
+
+                <p class="servico-intro">
+                    Seu site continua evoluindo depois da publicação.
+                </p>
+
+                <div class="manutencao-grid">
+
+                    <article>
+                        <i class="bx bx-refresh"></i>
+                        <h3>Atualização de conteúdo</h3>
+                        <p>
+                            Mantenha informações, textos e conteúdos atualizados.
+                        </p>
+                    </article>
+
+                    <article>
+                        <i class="bx bx-edit"></i>
+                        <h3>Alterações</h3>
+                        <p>
+                            Faça mudanças conforme seu negócio evolui.
+                        </p>
+                    </article>
+
+                    <article>
+                        <i class="bx bx-wrench"></i>
+                        <h3>Correções</h3>
+                        <p>
+                            Corrija problemas e mantenha tudo funcionando.
+                        </p>
+                    </article>
+
+                    <article>
+                        <i class="bx bx-trending-up"></i>
+                        <h3>Melhorias</h3>
+                        <p>
+                            Aprimore seu site com novas ideias e funcionalidades.
+                        </p>
+                    </article>
+
+                    <article>
+                        <i class="bx bx-support"></i>
+                        <h3>Suporte</h3>
+                        <p>
+                            Conte com auxílio quando precisar.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- COMO ESCOLHER -->
+
+        <section id="como-escolher">
+
+            <div class="container-full">
+
+                <h2 class="titulo">
+                    Como escolher?
+                </h2>
+
+                <hr>
+
+                <p class="servico-intro">
+                    Não sabe qual serviço precisa?
+                </p>
+
+
+                <div class="escolha-lista">
+
+                    <div class="escolha-item">
+
+                        <div>
+                            <i class="bx bx-building-house"></i>
+                        </div>
+
+                        <p>
+                            Você precisa <strong>apresentar sua empresa</strong>
+                        </p>
+
+                        <span>
+                            Site Institucional
+                        </span>
+
+                    </div>
+
+
+                    <div class="escolha-item">
+
+                        <div>
+                            <i class="bx bx-target-lock"></i>
+                        </div>
+
+                        <p>
+                            Você precisa <strong>divulgar uma campanha</strong>
+                        </p>
+
+                        <span>
+                            Landing Page
+                        </span>
+
+                    </div>
+
+
+                    <div class="escolha-item">
+
+                        <div>
+                            <i class="bx bx-package"></i>
+                        </div>
+
+                        <p>
+                            Você precisa <strong>mostrar produtos</strong>
+                        </p>
+
+                        <span>
+                            Catálogo Digital
+                        </span>
+
+                    </div>
+
+
+                    <div class="escolha-item">
+
+                        <div>
+                            <i class="bx bx-link-alt"></i>
+                        </div>
+
+                        <p>
+                            Você precisa <strong>conectar ferramentas</strong>
+                        </p>
+
+                        <span>
+                            Integrações
+                        </span>
+
+                    </div>
+
+
+                    <div class="escolha-item">
+
+                        <div>
+                            <i class="bx bx-wrench"></i>
+                        </div>
+
+                        <p>
+                            Você precisa <strong>atualizar seu site</strong>
+                        </p>
+
+                        <span>
+                            Manutenção
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CTA -->
+
+                <div class="servicos-cta">
+
+                    <h2>
+                        Ainda não sabe qual solução escolher?
+                    </h2>
+
+                    <p>
+                        Fale com a NEXO e vamos entender o que seu negócio precisa.
+                    </p>
+
+                    <a href="./contato.html" class="btn-cta">
+                        Fale com a NEXO
+                        <i class="bx bx-right-arrow-alt"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
 
     </main>
 
-    </body>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footerLogo">
+
+            <img src="./assets/img/header.png" alt="NEXO Web">
+
+            <p>
+                2026 NEXO Web - Todos os direitos reservados.
+            </p>
+
+        </div>
+
+
+        <div class="footerContato">
+
+            <p>
+                Telefone: 11 99999-9999
+            </p>
+
+            <p>
+                Instagram: @nexoweb
+            </p>
+
+            <p>
+                Contato: Faça seu pedido conosco!
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- AOS -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+    <!-- JavaScript -->
+
+    <script src="./assets/js/script.js"></script>
+
+</body>
+
+</html>

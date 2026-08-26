@@ -5,64 +5,451 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Link para o CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-
     <!-- Ícone do site -->
     <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
 
-    <!-- Google Fonts - Montserrat -->
+    <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
         rel="stylesheet">
 
-    <!-- BoxIcons -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css"
-        rel="stylesheet">
+    <!-- Boxicons -->
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
     <!-- AOS -->
-    <link
-        href="https://unpkg.com/aos@2.3.1/dist/aos.css"
-        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <title>NEXO Web - Contato</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <title>Projetos | NEXO Web</title>
 </head>
 
 <body>
-<!-- ACESSIBILIDADE EM LIBRAS -->
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-        </div>
-    </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
+
+    <!-- HEADER -->
 
     <header>
+
         <div class="container">
-            <a href="./index.html">
+
+            <a href="./index.html" aria-label="NEXO Web - Página inicial">
                 <img src="./assets/img/favicon.png" alt="NEXO Web">
             </a>
-            <nav>
-                <a href="./sobre.html">Sobre</a>
-                <a href="./servicos.html">Serviços</a>
-                <a href="./como-funciona.html">Como Funciona</a>
-                <a href="./projetos.html">Projetos</a>
+
+            <nav aria-label="Navegação principal">
+
+                <a href="./sobre.html">
+                    Sobre
+                </a>
+
+                <a href="./servicos.html">
+                    Serviços
+                </a>
+
+                <a href="./como-funciona.html">
+                    Como Funciona
+                </a>
+
+                <a href="./projetos.html" aria-current="page">
+                    Projetos
+                </a>
+
             </nav>
 
             <div class="header-botao">
-                <a href="./contato.html" class="btn-header">Fale Conosco</a>
+
+                <a href="./contato.html" class="btn-header">
+                    Fale Conosco
+                </a>
+
             </div>
+
         </div>
+
     </header>
 
-    
 
+    <main>
+
+        <!-- HERO -->
+
+        <section id="projetos-hero">
+
+            <div class="container-full">
+
+                <h1 class="titulo">
+                    Projetos que criam conexões
+                </h1>
+
+                <hr>
+
+                <p>
+                    Cada projeto é desenvolvido para transformar a identidade
+                    de um negócio em uma experiência digital.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- PORTFÓLIO -->
+
+        <section id="portfolio">
+
+            <div class="container-full">
+
+                <h2 class="titulo">
+                    Nosso portfólio
+                </h2>
+
+                <hr>
+
+                <p class="portfolio-intro">
+                    Conheça alguns dos projetos desenvolvidos pela NEXO Web.
+                </p>
+
+
+                <!-- FILTROS -->
+
+                <div class="portfolio-filtros">
+
+                    <button class="filtro-ativo">
+                        Todos
+                    </button>
+
+                    <button>
+                        Sites
+                    </button>
+
+                    <button>
+                        Landing Pages
+                    </button>
+
+                    <button>
+                        Catálogos
+                    </button>
+
+                </div>
+
+
+                <!-- PROJETOS -->
+
+                <div class="portfolio-grid">
+
+
+                    <!-- PROJETO ADEGA NEBRASKA -->
+
+                    <article class="projeto-card">
+
+                        <div class="projeto-imagem">
+
+                            <img
+                                src="./assets/img/projetos/adega-nebraska.jpg"
+                                alt="Site da Adega Nebraska">
+
+                        </div>
+
+                        <div class="projeto-info">
+
+                            <span class="projeto-tipo">
+                                Site + Catálogo
+                            </span>
+
+                            <h3>
+                                Adega Nebraska
+                            </h3>
+
+                            <p>
+                                Site desenvolvido para apresentar a empresa,
+                                seus produtos e facilitar o contato com clientes.
+                            </p>
+
+                            <a href="#projeto-adega" class="btn-projeto">
+                                Ver projeto
+                                <i class="bx bx-right-arrow-alt"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- FUTUROS PROJETOS -->
+
+                    <!--
+
+                    <article class="projeto-card">
+
+                        <div class="projeto-imagem">
+                            <img src="./assets/img/projetos/projeto-02.jpg"
+                                alt="Nome do projeto">
+                        </div>
+
+                        <div class="projeto-info">
+
+                            <span class="projeto-tipo">
+                                Landing Page
+                            </span>
+
+                            <h3>
+                                Projeto 02
+                            </h3>
+
+                            <p>
+                                Descrição breve do projeto.
+                            </p>
+
+                            <a href="#" class="btn-projeto">
+                                Ver projeto
+                                <i class="bx bx-right-arrow-alt"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                    -->
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROJETO INDIVIDUAL -->
+
+        <section id="projeto-adega">
+
+            <div class="container-full">
+
+
+                <!-- TÍTULO DO PROJETO -->
+
+                <div class="projeto-detalhe-intro">
+
+                    <span>
+                        Projeto NEXO Web
+                    </span>
+
+                    <h2 class="titulo">
+                        Adega Nebraska
+                    </h2>
+
+                    <hr>
+
+                    <p>
+                        Site institucional desenvolvido para apresentar
+                        a empresa e seus produtos de forma profissional,
+                        organizada e acessível.
+                    </p>
+
+                </div>
+
+
+                <!-- IMAGEM PRINCIPAL -->
+
+                <div class="projeto-destaque">
+
+                    <img
+                        src="./assets/img/projetos/adega-nebraska.jpg"
+                        alt="Projeto desenvolvido para Adega Nebraska">
+
+                </div>
+
+
+                <!-- INFORMAÇÕES -->
+
+                <div class="projeto-informacoes">
+
+
+                    <!-- DESAFIO -->
+
+                    <article>
+
+                        <i class="bx bx-target-lock"></i>
+
+                        <h3>
+                            Desafio
+                        </h3>
+
+                        <p>
+                            Criar uma presença digital profissional para
+                            apresentar a empresa e facilitar o acesso dos
+                            clientes aos produtos e informações.
+                        </p>
+
+                    </article>
+
+
+                    <!-- SOLUÇÃO -->
+
+                    <article>
+
+                        <i class="bx bx-bulb"></i>
+
+                        <h3>
+                            Solução
+                        </h3>
+
+                        <p>
+                            Desenvolvemos uma experiência digital com
+                            navegação simples, visual moderno e organização
+                            dos produtos em formato de catálogo.
+                        </p>
+
+                    </article>
+
+
+                    <!-- RESULTADO -->
+
+                    <article>
+
+                        <i class="bx bx-check-circle"></i>
+
+                        <h3>
+                            Resultado
+                        </h3>
+
+                        <p>
+                            Um site profissional, responsivo e preparado
+                            para conectar a empresa aos seus clientes.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+
+                <!-- TECNOLOGIAS -->
+
+                <div class="projeto-tecnologias">
+
+                    <h3>
+                        Tecnologias
+                    </h3>
+
+                    <div class="tecnologias-lista">
+
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Swiper</span>
+                        <span>AOS</span>
+                        <span>Responsividade</span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- GALERIA -->
+
+                <div class="projeto-galeria">
+
+                    <h3>
+                        Detalhes do projeto
+                    </h3>
+
+                    <div class="galeria-grid">
+
+                        <img
+                            src="./assets/img/projetos/adega-nebraska-01.jpg"
+                            alt="Página inicial do projeto Adega Nebraska">
+
+                        <img
+                            src="./assets/img/projetos/adega-nebraska-02.jpg"
+                            alt="Catálogo do projeto Adega Nebraska">
+
+                        <img
+                            src="./assets/img/projetos/adega-nebraska-03.jpg"
+                            alt="Detalhes do projeto Adega Nebraska">
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- CTA -->
+
+        <section id="cta">
+
+            <div class="container-full">
+
+                <h2>
+                    Seu próximo projeto pode ser o próximo a aparecer aqui.
+                </h2>
+
+                <p>
+                    Vamos transformar sua ideia em uma experiência digital?
+                </p>
+
+                <a href="./contato.html" class="btn-cta">
+                    Fale com a NEXO
+                    <i class="bx bx-right-arrow-alt"></i>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footerLogo">
+
+            <img src="./assets/img/header.png" alt="NEXO Web">
+
+            <p>
+                2026 NEXO Web - Todos os direitos reservados.
+            </p>
+
+        </div>
+
+
+        <div class="footerContato">
+
+            <p>
+                Telefone: 11 99999-9999
+            </p>
+
+            <p>
+                Instagram: @nexoweb
+            </p>
+
+            <p>
+                Contato: Faça seu pedido conosco!
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- AOS -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- JavaScript -->
+
+    <script src="./assets/js/script.js"></script>
 
 </body>
+
+</html>
