@@ -909,3 +909,49 @@ footer {
 
 
 /* #endregion AQUI TERMINA A PAGINA SOBRE, COM ESTILIZAÇÃO DO MESMO */
+
+/* #region AQUI INICIA A PÁGINA COMO FUNCIONA, COM ESTILIZAÇÃO DO MESMO */
+#processos{
+    
+    width: 100%;
+    min-height: 600px;
+
+    .boxesContainer {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 25px;
+        margin-top: 30px;
+
+        .boxes {
+            width: 500px;
+            min-height: 70px;
+            padding: 30px 15px;
+            background-color: var(--cor-card);
+            border: 1px solid var(--cor-destaque);
+            border-radius: 10px;
+            text-align: center;
+            transition: 0.5s;
+        }
+
+        .boxes:hover {
+            transform: scale(1.05);
+            border-color: var(--cor-brilho);
+            box-shadow: var(--cor-destaque) 0px 0px 25px;
+        }
+    }
+}
+
+/* #endregion Aqui finaliza a pagina como funciona */
+
+
+
+
+
+
+
+
+
+
+
+
+

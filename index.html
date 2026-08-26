@@ -31,7 +31,20 @@
 </head>
 
 <body>
+
+    <!-- ACESSIBILIDADE EM LIBRAS -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
     <div id="topo"></div>
+
     <header>
 
         <div class="container">
@@ -40,7 +53,7 @@
             </a>
             <nav>
                 <a href="./sobre.html">Sobre</a>
-                <a href="./servicos.html'">Serviços</a>
+                <a href="./servicos.html">Serviços</a>
                 <a href="./como-funciona.html">Como Funciona</a>
                 <a href="./projetos.html">Projetos</a>
             </nav>
@@ -310,20 +323,20 @@
         </section>
 
         <section id="cta">
-    <div class="container">
-        <div class="cta-content">
+            <div class="container">
+                <div class="cta-content">
 
-            <h2>Seu próximo cliente pode estar procurando por você agora.</h2>
+                    <h2>Seu próximo cliente pode estar procurando por você agora.</h2>
 
-            <p>Vamos criar essa conexão?</p>
+                    <p>Vamos criar essa conexão?</p>
 
-            <a href="./contato.html" class="btn-cta">
-                Fale com a NEXO
-            </a>
+                    <a href="./contato.html" class="btn-cta">
+                        Fale com a NEXO
+                    </a>
 
-        </div>
-    </div>
-</section>
+                </div>
+            </div>
+        </section>
 
 
     </main>
