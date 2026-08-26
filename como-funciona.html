@@ -5,257 +5,389 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Icone do site  -->
+    <!-- Ícone do site -->
     <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
 
-    <!-- Link da font montserrat do google fonts  -->
+    <!-- Fontes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
         rel="stylesheet">
 
-    <!-- Link do boxIcons (CDN público jsDelivr) -->
+    <!-- Boxicons -->
     <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
-    <!-- Link do aos -->
+    <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-    <!-- Link da CDN do swiper  -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
 
-    <!-- Link para o css  -->
+    <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/style.css">
 
-    <title>NEXO Web</title>
+    <title>Como Funciona | NEXO Web</title>
 </head>
 
 <body>
-    <header>
 
+    <header>
         <div class="container">
-            <a href="index.html">
+
+            <a href="./index.html" aria-label="NEXO Web - Página inicial">
                 <img src="./assets/img/favicon.png" alt="NEXO Web">
             </a>
-            <nav>
+
+            <nav aria-label="Navegação principal">
                 <a href="./sobre.html">Sobre</a>
-                <a href="./servicos.html'">Serviços</a>
-                <a href="./como-funciona.html">Como Funciona</a>
+                <a href="./servicos.html">Serviços</a>
+                <a href="./como-funciona.html" aria-current="page">Como Funciona</a>
                 <a href="./projetos.html">Projetos</a>
             </nav>
 
             <div class="header-botao">
                 <a href="./contato.html" class="btn-header">Fale Conosco</a>
             </div>
+
         </div>
     </header>
 
     <main>
+
         <section id="processos">
             <div class="container-full">
-                <figure>
-                    <a href="./assets/img/header.png" alt="Logo simples"></a>
-                </figure>
-                <h1 class="titulo">Do primeiro contato ao seu site no ar.</h2>
 
-                    <p>Criamos um processo simples e transparente para transformar a ideia do seu negócio em uma
-                        presença
-                        digital profissional. </p>
-            </div>
+                <div class="processos-intro">
+                    <h1 class="titulo">Do primeiro contato ao seu site no ar.</h1>
+                    <hr>
 
-            <div class="flex gap-6 items-start" style="opacity: 1; transform: none;">
-                <div
-                    class="w-12 h-12 rounded-2xl bg-background border border-border flex items-center justify-center shrink-0 relative z-10">
-                    <span class="font-mono text-sm text-primary font-bold">01</span>
-                </div>
-                <div>
-                    <div class="flex items-center gap-3 mb-1">
-                        <h3 class="font-bold text-lg tracking-tight">Entendemos</h3><span
-                            class="text-[10px] font-mono text-primary/70 bg-primary/5 px-2 py-0.5 rounded-full">Primeiro,
-                            conhecemos o seu negócio.</span>
-                    </div>
-                    <p class="text-sm text-muted-foreground leading-relaxed"> Conversamos com você para entender sua
-                        empresa, seus produtos ou serviços, seu público e os objetivos que você deseja alcançar com o
-                        site.
+                    <p>
+                        Criamos um processo simples e transparente para transformar a ideia
+                        do seu negócio em uma presença digital profissional.
                     </p>
                 </div>
+
+                <!-- ETAPAS -->
+                <div class="processos-lista">
+
+                    <article class="processo-item">
+                        <div class="processo-numero">
+                            <span>01</span>
+                        </div>
+
+                        <div class="processo-conteudo">
+                            <div class="processo-titulo">
+                                <h3>Entendemos</h3><br>
+                                <span><b>Primeiro, conhecemos o seu negócio.</b></span>
+                            </div>
+
+                            <p>
+                                Conversamos com você para entender sua empresa, seus produtos
+                                ou serviços, seu público e os objetivos que deseja alcançar
+                                com o site.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="processo-item">
+                        <div class="processo-numero">
+                            <span>02</span>
+                        </div>
+
+                        <div class="processo-conteudo">
+                            <div class="processo-titulo">
+                                <h3>Planejamos</h3><br>
+                                <span><b>Transformamos ideias em estrutura.</b></span>
+                            </div>
+
+                            <p>
+                                Definimos a estrutura do site, as páginas, os conteúdos,
+                                as funcionalidades e a direção visual do projeto.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="processo-item">
+                        <div class="processo-numero">
+                            <span>03</span>
+                        </div>
+
+                        <div class="processo-conteudo">
+                            <div class="processo-titulo">
+                                <h3>Desenvolvemos</h3><br>
+                                <span><b>Damos vida ao projeto.</b></span>
+                            </div>
+
+                            <p>
+                                Desenvolvemos o site de acordo com o planejamento, criando
+                                uma experiência moderna, funcional e adaptada para diferentes
+                                dispositivos.
+                            </p>
+
+                            <span class="processo-tecnologias">
+                                <b>Design + HTML + CSS + JavaScript + Responsividade</b>
+                            </span>
+                        </div>
+                    </article>
+
+                    <article class="processo-item">
+                        <div class="processo-numero">
+                            <span>04</span>
+                        </div>
+
+                        <div class="processo-conteudo">
+                            <div class="processo-titulo">
+                                <h3>Ajustamos</h3><br>
+                                <span><b>O projeto ganha os últimos detalhes.</b></span>
+                            </div>
+
+                            <p>
+                                Apresentamos o projeto para você e realizamos os ajustes
+                                necessários para que o resultado esteja alinhado às suas
+                                expectativas e à identidade do seu negócio.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="processo-item">
+                        <div class="processo-numero">
+                            <span>05</span>
+                        </div>
+
+                        <div class="processo-conteudo">
+                            <div class="processo-titulo">
+                                <h3>Publicamos</h3><br>
+                                <span><b>Sua empresa conectada ao mundo.</b></span>
+                            </div>
+
+                            <p>
+                                Depois da aprovação, colocamos o site no ar e deixamos
+                                sua presença digital pronta para seus clientes.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- O QUE ENTREGAMOS -->
+        <section id="entrega">
+            <div class="container-full">
+
+                <h1>
+                    <div class="titulo">O que entregamos
+                </h1>
+                <hr>
             </div>
 
-
-            <div class="flex gap-6 items-start" style="opacity: 1; transform: none;">
-                <div
-                    class="w-12 h-12 rounded-2xl bg-background border border-border flex items-center justify-center shrink-0 relative z-10">
-                    <span class="font-mono text-sm text-primary font-bold">02</span>
-                </div>
-                <div>
-                    <div class="flex items-center gap-3 mb-1">
-                        <h3 class="font-bold text-lg tracking-tight">Planejamento</h3><span
-                            class="text-[10px] font-mono text-primary/70 bg-primary/5 px-2 py-0.5 rounded-full">Transformamos
-                            ideias em estrutura.</span>
+            <div class="container grid-diferenciais">
+                <!-- CARD 1 -->
+                <div class="card-diferencial">
+                    <div class="card-frente">
+                        <div class="icone-diferencial">
+                            <i class='bx bx-devices'></i>
+                        </div>
+                        <h3>Site responsivo</h3>
                     </div>
-                    <p class="text-sm text-muted-foreground leading-relaxed"> Definimos a estrutura do site, as páginas,
-                        conteúdos, funcionalidades e a direção visual do projeto.
-                </div>
-            </div>
-
-
-            <div class="flex gap-6 items-start" style="opacity: 1; transform: none;">
-                <div
-                    class="w-12 h-12 rounded-2xl bg-background border border-border flex items-center justify-center shrink-0 relative z-10">
-                    <span class="font-mono text-sm text-primary font-bold">03</span>
-                </div>
-                <div>
-                    <div class="flex items-center gap-3 mb-1">
-                        <h3 class="font-bold text-lg tracking-tight">Desenvolvemos</h3><span
-                            class="text-[10px] font-mono text-primary/70 bg-primary/5 px-2 py-0.5 rounded-full">Damos
-                            vida
-                            ao projeto.</span>
+                    <div class="card-verso">
+                        <p>
+                            Seu site adaptado para celular, tablet e computador.
+                        </p>
                     </div>
-                    <p class="text-sm text-muted-foreground leading-relaxed"> Desenvolvemos o site de acordo com o
-                        planejamento, criando uma experiência moderna, funcional e adaptada para diferentes
-                        dispositivos.
-                        <br>
-                        <span>Design + HTML + CSS + JavaScript + Responsividade </span>
                 </div>
-            </div>
 
-            <div class="flex gap-6 items-start" style="opacity: 1; transform: none;">
-                <div
-                    class="w-12 h-12 rounded-2xl bg-background border border-border flex items-center justify-center shrink-0 relative z-10">
-                    <span class="font-mono text-sm text-primary font-bold">04</span>
-                </div>
-                <div>
-                    <div class="flex items-center gap-3 mb-1">
-                        <h3 class="font-bold text-lg tracking-tight">Planejamento</h3><span
-                            class="text-[10px] font-mono text-primary/70 bg-primary/5 px-2 py-0.5 rounded-full">O
-                            projeto
-                            ganha os últimos detalhes..</span>
+                <!-- CARD 2 -->
+                <div class="card-diferencial">
+                    <div class="card-frente">
+                        <div class="icone-diferencial">
+                            <i class='bx bx-palette'></i>
+                        </div>
+                        <h3>Design personalizado</h3>
                     </div>
-                    <p class="text-sm text-muted-foreground leading-relaxed"> Apresentamos o projeto para você e
-                        realizamos
-                        os ajustes necessários para que o resultado esteja alinhado às suas expectativas e à identidade
-                        do
-                        seu negócio.
-                </div>
-            </div>
-
-            <div class="flex gap-6 items-start" style="opacity: 1; transform: none;">
-                <div
-                    class="w-12 h-12 rounded-2xl bg-background border border-border flex items-center justify-center shrink-0 relative z-10">
-                    <span class="font-mono text-sm text-primary font-bold">05</span>
-                </div>
-                <div>
-                    <div class="flex items-center gap-3 mb-1">
-                        <h3 class="font-bold text-lg tracking-tight">Publicamos</h3><span
-                            class="text-[10px] font-mono text-primary/70 bg-primary/5 px-2 py-0.5 rounded-full">Sua
-                            empresa
-                            conectada ao mundo.</span>
+                    <div class="card-verso">
+                        <p>
+                            Um projeto visual pensado para representar sua empresa.
+                        </p>
                     </div>
-                    <p class="text-sm text-muted-foreground leading-relaxed"> Depois da aprovação, colocamos o site no
-                        ar e
-                        deixamos sua presença digital pronta para seus clientes.
                 </div>
-            </div>
 
-            <section id="entrega">
+                <!-- CARD 3 -->
+                <div class="card-diferencial">
+                    <div class="card-frente">
+                        <div class="icone-diferencial">
+                            <i class='bx bx-git-merge'></i>
+                        </div>
+                        <h3>Integrações</h3>
+                    </div>
+                    <div class="card-verso">
+                        <p>
+                            WhatsApp, redes sociais, mapas e outras ferramentas
+                            necessárias para o projeto.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="card-diferencial">
+                    <div class="card-frente">
+                        <div class="icone-diferencial">
+                            <i class='bx bx-slider-alt'></i>
+                        </div>
+                        <h3>04. AJUSTAMOS</h3>
+                    </div>
+                    <div class="card-verso">
+                        <p>
+                            Refinamos o projeto com você.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CARD 5 -->
+                <div class="card-diferencial">
+                    <div class="card-frente">
+                        <div class="icone-diferencial">
+                            <i class='bx bx-rocket'></i>
+                        </div>
+                        <h3>Publicação</h3>
+                    </div>
+                    <div class="card-verso">
+                        <p>
+                            Colocamos seu projeto no ar e deixamos tudo pronto
+                            para seus clientes.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- CARD 6 -->
+                <div class="card-diferencial">
+                    <div class="card-frente">
+                        <div class="icone-diferencial">
+                            <i class='bx bx-support'></i>
+                        </div>
+                        <h3>Suporte</h3>
+                    </div>
+                    <div class="card-verso">
+                        <p>
+                            Caso contratado, podemos continuar cuidando das
+                            atualizações e melhorias do site.
+                        </p>
+                    </div>
+                </div>
+        </section>
+
+        <!-- INFORMAÇÕES DO CLIENTE -->
+        <section id="inf-cliente">
+            <div class="container-full">
+
                 <div class="titulo">
-                    <h1> O que entregamos</h1>
-                    <hr><br>
-                    <div class="boxesContainer">
-
-                        <div class="boxes">
-                            <h3><span>Site responsivo</span></h3><br>
-                            <p>Seu site adaptado para celular, tablet e computador. </p>
-                        </div>
-
-                        <div class="boxes">
-                            <h3><span> Design personalizado</span></h3><br>
-                            <p>Um projeto visual pensado para representar sua empresa. </p>
-                        </div>
-
-                        <div class="boxes">
-                            <h3><span>Integrações</span></h3><br>
-                            <p>WhatsApp, redes sociais, mapas e outras ferramentas necessárias. </p>
-                        </div>
-
-                        <div class="boxes">
-                            <h3><span>Publicação</span></h3><br>
-                            <p>Colocamos seu projeto no ar e deixamos tudo pronto para seus clientes. </p>
-                        </div>
-
-                        <div class="boxes">
-                            <h3><span>Suporte</span></h3><br>
-                            <p>Caso contratado, podemos continuar cuidando das atualizações e melhorias do site. </p>
-                        </div>
-                    </div>
-
-                    <section id="inf-cliente">
-                        <h2 class="titulo">Caso contratado, podemos continuar cuidando das atualizações e melhorias do
-                            site. </h2>
-                        <hr><br>
-
-                        <p>Para criar um site que realmente represente sua empresa, algumas informações e materiais
-                            serão necessários. </p><br>
-
-                        <p class="text1">Você pode fornecer:
-
-                            Logo da empresa
-
-                            Cores ou identidade visual
-
-                            Fotos
-
-                            Textos
-
-                            Informações sobre produtos e serviços
-
-                            Dados de contato
-
-                            Links das redes sociais
-
-                            Endereço, quando necessário </p>
-
-                        <p class="text2">Não tem todo o material pronto? Não tem problema. Podemos orientar você sobre o
-                            que será necessário para o projeto. </p>
-                    </section>
-
-
+                    <h2>O que precisamos de você?</h2>
+                    <hr>
                 </div>
 
-            </section>
+                <p>
+                    Para criar um site que realmente represente sua empresa,
+                    algumas informações e materiais serão necessários.
+                </p>
 
-            <section id="p-final">
-                <h2 class="titulo"> E depois da publicação? </h2>
-                <p>Nosso relacionamento não precisa terminar quando o site entra no ar.
+                <div class="cliente-conteudo">
 
-                    Aí você apresenta:
+                    <div class="cliente-lista">
+                        <h3>Você pode fornecer:</h3>
 
-                    Manutenção
+                        <ul>
+                            <li><i class="bx bx-check"></i> Logo da empresa</li>
+                            <li><i class="bx bx-check"></i> Cores ou identidade visual</li>
+                            <li><i class="bx bx-check"></i> Fotos</li>
+                            <li><i class="bx bx-check"></i> Textos</li>
+                            <li><i class="bx bx-check"></i> Informações sobre produtos e serviços</li>
+                            <li><i class="bx bx-check"></i> Dados de contato</li>
+                            <li><i class="bx bx-check"></i> Links das redes sociais</li>
+                            <li><i class="bx bx-check"></i> Endereço, quando necessário</li>
+                        </ul>
+                    </div>
 
-                    Atualizações e alterações no site.
+                    <div class="cliente-aviso">
+                        <i class="bx bx-info-circle"></i>
 
-                    Evolução
+                        <p>
+                            <strong>Não tem todo o material pronto?</strong><br>
+                            Não tem problema. Podemos orientar você sobre o que será
+                            necessário para o projeto.
+                        </p>
+                    </div>
 
-                    Novas páginas, funcionalidades e melhorias.
+                </div>
+            </div>
+        </section>
 
-                    Suporte
+        <!-- PÓS-PUBLICAÇÃO -->
+        <section id="p-final">
+            <div class="container-full">
 
-                    Auxílio quando você precisar. </p>
+                <div class="titulo">
+                    <h2>E depois da publicação?</h2>
+                    <hr>
+                </div>
 
-            </section>
+                <p class="p-final-intro">
+                    Nosso relacionamento não precisa terminar quando o site entra no ar.
+                </p>
 
+                <div class="pos-publicacao">
 
-            <section id="cta">
-                <h2>Pronto para criar sua presença digital? </h2>
-                <p>Vamos transformar sua ideia em uma experiência digital profissional. </p>
-            </section>
+                    <article>
+                        <i class="bx bx-wrench"></i>
+                        <h3>Manutenção</h3>
+                        <p>
+                            Atualizações e alterações no site.
+                        </p>
+                    </article>
 
+                    <article>
+                        <i class="bx bx-trending-up"></i>
+                        <h3>Evolução</h3>
+                        <p>
+                            Novas páginas, funcionalidades e melhorias.
+                        </p>
+                    </article>
+
+                    <article>
+                        <i class="bx bx-support"></i>
+                        <h3>Suporte</h3>
+                        <p>
+                            Auxílio quando você precisar.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section id="cta">
+            <div class="container-full">
+
+                <h2>Pronto para criar sua presença digital?</h2>
+
+                <p>
+                    Vamos transformar sua ideia em uma experiência digital profissional.
+                </p>
+
+                <a href="./contato.html" class="btn-cta">
+                    Fale conosco
+                    <i class="bx bx-right-arrow-alt"></i>
+                </a>
+
+            </div>
+        </section>
 
     </main>
 
     <footer>
         <div class="footerLogo">
-            <img src="./assets/img/header.png" alt="Logo NW">
+            <img src="./assets/img/header.png" alt="NEXO Web">
             <p>2026 NEXO Web - Todos os direitos reservados.</p>
         </div>
 
@@ -266,10 +398,7 @@
         </div>
     </footer>
 
-
-    <!-- __________Links do JS e sei lá o que__________ -->
-
-    <!-- Link AOS JS -->
+    <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- Inicializador do AOS -->
@@ -277,11 +406,12 @@
         AOS.init();
     </script>
 
-    <!-- Link do script do carrossel -->
+    <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-element-bundle.min.js"></script>
 
-    <!-- Link para o meu script -->
+    <!-- JavaScript -->
     <script src="./assets/js/script.js"></script>
+
 </body>
 
 </html>

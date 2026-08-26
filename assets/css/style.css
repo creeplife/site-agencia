@@ -262,7 +262,7 @@ header {
 
 /* #endregion */
 
-/* #region Estilização do main, que contem todas as seções do site */
+/* #region AQUI INICIA A PAGINA INDEX, DO MAIN AO FOOTER */
 main {
     padding-top: 10%;
     margin-bottom: 10%;
@@ -369,12 +369,13 @@ main {
             justify-content: center;
 
             h3,
-            hr{
+            hr {
                 margin-bottom: 1%;
                 text-align: center;
-                                font-size: 30px;
+                font-size: 30px;
 
             }
+
             p {
                 margin-bottom: 1%;
                 text-align: center;
@@ -648,26 +649,27 @@ main {
             text-align: center;
         }
     }
+
     button {
-                align-self: center;
-                display: block;
+        align-self: center;
+        display: block;
 
-                width: 25%;
-                background-color: var(--cor-destaque);
-                border: 1px solid var(--cor-destaque);
-                border-radius: 7px;
-                color: var(--cor-brilho);
-                font-size: 15px;
-                transition: .5s;
-                margin: 30px auto 0 auto;
+        width: 25%;
+        background-color: var(--cor-destaque);
+        border: 1px solid var(--cor-destaque);
+        border-radius: 7px;
+        color: var(--cor-brilho);
+        font-size: 15px;
+        transition: .5s;
+        margin: 30px auto 0 auto;
 
 
-            }
+    }
 
-            button:hover {
-                cursor: pointer;
-                transform: scale(1.1);
-            }
+    button:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+    }
 
     #projetos {
         padding: 60px 20px;
@@ -851,7 +853,6 @@ footer {
 
 /* #endregion AQUI TERMINA A PAGINA DE CONTATO, COM FORMULÁRIO E ESTILIZAÇÃO DO MESMO */
 
-
 /* #region AQUI INICIA A PAGINA SOBRE, COM ESTILIZAÇÃO DO MESMO */
 #sobre-pag {
 
@@ -865,19 +866,19 @@ footer {
         font-size: 20px;
     }
 
-    .texto1{
+    .texto1 {
         text-align: justify;
         font-size: 18px;
     }
 
-    .texto2{
+    .texto2 {
         margin-right: auto;
 
         text-align: right;
         font-size: 20px;
     }
 
-    p{
+    p {
         text-align: center;
         font-size: 18px;
     }
@@ -910,48 +911,253 @@ footer {
 
 /* #endregion AQUI TERMINA A PAGINA SOBRE, COM ESTILIZAÇÃO DO MESMO */
 
-/* #region AQUI INICIA A PÁGINA COMO FUNCIONA, COM ESTILIZAÇÃO DO MESMO */
-#processos{
-    
+/* #region AQUI INICIA A PÁGINA COMO FUNCIONA, COM ESTILIZAÇÃO DO MESMO*/
+#processos {
     width: 100%;
-    min-height: 600px;
+    padding: 60px 0 80px;
 
-    .boxesContainer {
-        display: flex;
-        justify-content: space-evenly;
-        gap: 25px;
-        margin-top: 30px;
+    .processos-intro {
+        max-width: 850px;
+        margin: 0 auto 70px;
+        text-align: center;
 
-        .boxes {
-            width: 500px;
-            min-height: 70px;
-            padding: 30px 15px;
-            background-color: var(--cor-card);
-            border: 1px solid var(--cor-destaque);
-            border-radius: 10px;
+        .titulo {
+            color: var(--cor-destaque);
+            font-size: 40px;
+            line-height: 1.1;
             text-align: center;
-            transition: 0.5s;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.579);
+            margin: 0 0 20px;
         }
 
-        .boxes:hover {
-            transform: scale(1.05);
-            border-color: var(--cor-brilho);
-            box-shadow: var(--cor-destaque) 0px 0px 25px;
+        hr {
+            width: 60px;
+            height: 3px;
+            border: 0;
+            margin: 15px auto 25px;
+            background-color: var(--cor-brilho);
+            box-shadow: 0 0 10px var(--cor-brilho);
+        }
+
+        p {
+            max-width: 750px;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 1.8;
+            text-align: center;
+        }
+    }
+
+    .processos-lista {
+        position: relative;
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 25px;
+            top: 25px;
+            bottom: 25px;
+            width: 2px;
+            background: linear-gradient(to bottom,
+                    var(--cor-destaque),
+                    var(--cor-brilho),
+                    var(--cor-destaque));
+            box-shadow: 0 0 10px var(--cor-brilho);
+        }
+    }
+
+    .processo-item {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    .processo-numero {
+        flex: 0 0 52px;
+        width: 52px;
+        height: 52px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--cor-fundo);
+        border: 2px solid var(--cor-destaque);
+        border-radius: 15px;
+        box-shadow: 0 0 15px rgba(139, 92, 246, 0.35);
+
+        span {
+            color: var(--cor-brilho);
+            font-family: monospace;
+            font-size: 15px;
+            font-weight: 700;
+        }
+    }
+
+    .processo-conteudo {
+        flex: 1;
+        padding: 5px 0 20px;
+    }
+}
+
+#entrega {
+    width: 100%;
+    padding: 60px 0 80px;
+    min-height: 600px;
+
+    .titulo {
+        color: var(--cor-destaque);
+        font-size: 40px;
+        line-height: 1.1;
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.579);
+        margin: 0 0 20px;
+    }
+
+    hr {
+        width: 60px;
+        height: 3px;
+        border: 0;
+        margin: 15px auto 25px;
+        background-color: var(--cor-brilho);
+        box-shadow: 0 0 10px var(--cor-brilho);
+    }
+
+    p {
+        max-width: 750px;
+        margin: 0 auto;
+        font-size: 18px;
+        line-height: 1.8;
+        text-align: center;
+    }
+
+    .grid-diferenciais {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 30px;
+    }
+
+    .card-diferencial {
+        height: 300px;
+        position: relative;
+        perspective: 1000px;
+    }
+
+    .card-frente,
+    .card-verso {
+        position: absolute;
+
+        width: 100%;
+        height: 100%;
+
+        padding: 30px;
+
+        background-color: var(--cor-card);
+
+        border-radius: 8px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        backface-visibility: hidden;
+
+        transition: transform 0.6s ease;
+        border: 1px solid transparent;
+    }
+
+    .card-frente {
+        transform: rotateY(0deg);
+    }
+
+    .card-verso {
+
+        transform: rotateY(180deg);
+        border-color: var(--cor-destaque);
+    }
+
+    .card-diferencial:hover .card-frente {
+        transform: rotateY(180deg);
+    }
+
+    .card-diferencial:hover .card-verso {
+        transform: rotateY(0deg);
+    }
+
+    .icone-diferencial i {
+        font-size: 40px;
+        color: var(--cor-destaque);
+        margin-bottom: 15px;
+        text-shadow: 0 0 15px var(--cor-destaque);
+    }
+
+    h3 {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    p {
+        text-align: center;
+    }
+}
+
+#inf-cliente {
+    width: 100%;
+    padding: 60px 0 80px;
+
+    #inf-cliente {
+
+    .cliente-lista {
+
+        ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px 20px;
+        }
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 12px;
+            background-color: rgba(139, 92, 246, 0.05);
+            border: 1px solid rgba(139, 92, 246, 0.15);
+            border-radius: 8px;
+            font-size: 14px;
+            transition: 0.3s ease;
+
+            i {
+                flex-shrink: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 22px;
+                height: 22px;
+                border-radius: 50%;
+                background-color: var(--cor-destaque);
+                color: var(--cor-brilho);
+                font-size: 15px;
+                box-shadow: 0 0 8px rgba(139, 92, 246, 0.35);
+            }
+
+            &:hover {
+                border-color: var(--cor-brilho);
+                background-color: rgba(139, 92, 246, 0.10);
+                transform: translateX(4px);
+            }
         }
     }
 }
 
+
+
+}
+
+
 /* #endregion Aqui finaliza a pagina como funciona */
-
-
-
-
-
-
-
-
-
-
-
-
-
