@@ -1,13 +1,10 @@
-<<<<<<< HEAD
-/* Arquivo responsável por deixar o site responsivo */
+/* Regras responsivas do site */
 
-@media (max-width:1025px) {
-
+@media (max-width: 1025px) {
     h2,
     h3,
     h4 {
         font-size: 30px;
-
     }
 
     main {
@@ -15,99 +12,80 @@
             .home-txt {
                 width: 70%;
                 padding: 15px;
-
-
-                h1 {
-                    font-size: 30px;
-
-                    span {
-                        font-size: 30px;
-                    }
-                }
-
-                figure {
-                    width: 30%;
-
-                    img {
-                        width: 250px;
-                    }
-                }
             }
 
-
-
-        }
-
-        #agencias .container {
-            padding: 15px;
-
-        }
-
-        #sobre .container {
             figure {
                 width: 30%;
 
                 img {
-                    width: 400px;
+                    width: 250px;
                 }
             }
+        }
+
+        #agencias .container,
+        #sobre .container {
+            padding: 15px;
+        }
+
+        #sobre .container figure img {
+            width: 400px;
         }
     }
 }
 
-/* O max-width tem a regra que só valem em telas até determinadas largura */
-/* Responsivo para tablets */
 @media (max-width: 769px) {
-
-    /* #region escondendo menu e mostrando o icone */
-
     header {
+        .container {
+            min-height: 75px;
+            height: auto;
+            flex-wrap: wrap;
+            padding: 10px 15px;
+        }
 
         .container nav {
-
-            /* esconder o menu de links */
-            display: none;
-
-            /* faz o menu se posicionar em relação ao header */
-            position: absolute;
-
-            top: 100%;
-            left: 0;
-            width: 100%;
-            flex-direction: column;
-            padding: 30px 0;
-            background-color: #7b3adc29;
-            backdrop-filter: blur(15px);
-            border-radius: 0 0 20px 20px;
-
-        }
-
-        .container nav.ativo {
+            order: 3;
+            flex: 1 0 100%;
             display: flex;
-
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: center;
+            gap: 14px;
+            position: static;
+            width: 100%;
+            min-width: 0;
+            padding: 15px 0;
+            transform: none;
         }
 
-        /* deixar os elementos na vertical display block */
+        .container nav a {
+            text-align: center;
+            overflow-wrap: anywhere;
+        }
+
+        .container .header-botao {
+            flex: 0 1 auto;
+            margin-right: 0;
+            padding: 10px;
+        }
+
         .container #menu-icon {
-            display: block;
-            font-size: 35px;
-            /* indica a mãozinha para clicar */
-            cursor: pointer;
+            display: none;
         }
-
     }
 
     main {
-
         #home.container {
             flex-direction: column-reverse;
             justify-content: flex-start;
 
             figure {
+                width: 100%;
                 height: 40%;
 
                 img {
                     width: 250px;
+                    max-width: 100%;
                 }
             }
 
@@ -122,281 +100,130 @@
                         font-size: 25px;
                     }
                 }
-
             }
-
         }
 
         #sobre {
-            height: 80dvh;
+            height: auto;
+            min-height: 80dvh;
 
             .container {
-
                 flex-direction: column;
 
                 figure,
                 .sobre-txt {
                     width: 90%;
-                    height: 50%;
+                    height: auto;
                 }
             }
-
         }
 
-        /* responsivo para celulares mobile */
-        @media(max-width:480px) {
-            main {
-                #home .container {
+        #diferenciais,
+        #como-funciona,
+        #entrega {
+            .grid-diferenciais {
+                grid-template-columns: 1fr;
+            }
+        }
 
-                    figure {
+        #integracoes {
+            .servicos-grid {
+                grid-template-columns: 1fr;
+            }
+        }
 
-                        height: 40%;
-                        align-items: flex-end;
+        #manutencao {
+            .manutencao-grid {
+                grid-template-columns: 1fr;
+            }
+        }
 
-                        img {
-                            width: 200px;
-                        }
-
-
-                    }
-
-                    .home-txt {
-                        h1 {
-                            flex-direction: column;
-
-                            span {
-                                padding: 15px;
-                            }
-                        }
-                    }
-
-
-
-
-                }
-
-
+        #como-escolher {
+            .escolha-lista,
+            .servicos-cta {
+                width: 100%;
             }
 
+            .escolha-item {
+                grid-template-columns: 50px minmax(0, 1fr);
+                width: 100%;
+
+                span {
+                    grid-column: 2;
+                    justify-self: start;
+                    max-width: 100%;
+                }
+            }
+        }
+
+        #portfolio .portfolio-grid {
+            grid-template-columns: 1fr;
+        }
+
+        h1,
+        h2,
+        h3,
+        p,
+        a,
+        button {
+            max-width: 100%;
+            overflow-wrap: anywhere;
         }
     }
 
-
     footer {
-        height: 40dvh;
+        height: auto;
+        min-height: 40dvh;
         padding: 25px;
 
         .container {
             flex-direction: column;
-
-            .footer-logo,
-            .footer-icons {
-                width: 90%;
-                height: 50%;
-            }
-        }
-    }
-
-
-=======
-/* Arquivo responsável por deixar o site responsivo */
-
-@media (max-width:1025px) {
-
-    h2,
-    h3,
-    h4 {
-        font-size: 30px;
-
-    }
-
-    main {
-        #home .container {
-            .home-txt {
-                width: 70%;
-                padding: 15px;
-
-
-                h1 {
-                    font-size: 30px;
-
-                    span {
-                        font-size: 30px;
-                    }
-                }
-
-                figure {
-                    width: 30%;
-
-                    img {
-                        width: 250px;
-                    }
-                }
-            }
-
-
-
         }
 
-        #agencias .container {
-            padding: 15px;
-
-        }
-
-        #sobre .container {
-            figure {
-                width: 30%;
-
-                img {
-                    width: 400px;
-                }
-            }
+        .footerContato {
+            position: static;
+            transform: none;
+            margin-top: 20px;
+            text-align: center;
         }
     }
 }
 
-/* O max-width tem a regra que só valem em telas até determinadas largura */
-/* Responsivo para tablets */
-@media (max-width: 769px) {
+@media (max-width: 480px) {
+    header .container {
+        gap: 10px;
+    }
 
-    /* #region escondendo menu e mostrando o icone */
+    main #home .container {
+        figure {
+            height: 40%;
+            align-items: flex-end;
 
-    header {
+            img {
+                width: 200px;
+            }
+        }
 
-        .container nav {
-
-            /* esconder o menu de links */
-            display: none;
-
-            /* faz o menu se posicionar em relação ao header */
-            position: absolute;
-
-            top: 100%;
-            left: 0;
+        .home-txt {
             width: 100%;
-            flex-direction: column;
-            padding: 30px 0;
-            background-color: #7b3adc29;
-            backdrop-filter: blur(15px);
-            border-radius: 0 0 20px 20px;
 
+            h1 {
+                flex-direction: column;
+
+                span {
+                    margin-left: 0;
+                    padding: 15px 0;
+                }
+            }
         }
-
-        .container nav.ativo {
-            display: flex;
-
-        }
-
-        /* deixar os elementos na vertical display block */
-        .container #menu-icon {
-            display: block;
-            font-size: 35px;
-            /* indica a mãozinha para clicar */
-            cursor: pointer;
-        }
-
     }
 
     main {
+        padding: 12% 5%;
 
-        #home.container {
-            flex-direction: column-reverse;
-            justify-content: flex-start;
-
-            figure {
-                height: 40%;
-
-                img {
-                    width: 250px;
-                }
-            }
-
-            .home-txt {
-                width: 80%;
-                height: 50%;
-
-                h1 {
-                    font-size: 25px;
-
-                    span {
-                        font-size: 25px;
-                    }
-                }
-
-            }
-
-        }
-
-        #sobre {
-            height: 80dvh;
-
-            .container {
-
-                flex-direction: column;
-
-                figure,
-                .sobre-txt {
-                    width: 90%;
-                    height: 50%;
-                }
-            }
-
-        }
-
-        /* responsivo para celulares mobile */
-        @media(max-width:480px) {
-            main {
-                #home .container {
-
-                    figure {
-
-                        height: 40%;
-                        align-items: flex-end;
-
-                        img {
-                            width: 200px;
-                        }
-
-
-                    }
-
-                    .home-txt {
-                        h1 {
-                            flex-direction: column;
-
-                            span {
-                                padding: 15px;
-                            }
-                        }
-                    }
-
-
-
-
-                }
-
-
-            }
-
+        #como-escolher .escolha-item {
+            gap: 12px;
+            padding: 16px;
         }
     }
-
-
-    footer {
-        height: 40dvh;
-        padding: 25px;
-
-        .container {
-            flex-direction: column;
-
-            .footer-logo,
-            .footer-icons {
-                width: 90%;
-                height: 50%;
-            }
-        }
-    }
-
-
->>>>>>> be900fbd01b99030af4d958fcd210fee054286b1
 }
