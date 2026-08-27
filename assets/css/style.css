@@ -2,19 +2,12 @@
 :root {
     --fonte-principal: "Exo 2", sans-serif;
     /* Variveis de cores  */
-    --cor-fundo: #06020f;
+  --cor-fundo: #030108;       
     --cor-card: #130d26;
     --cor-titulo: #0098f7ad;
     --cor-texto: #a3a1cc;
     --cor-destaque: #8b5cf6;
-    --cor-brilho: #00f2fe; 
-
-    /* --cor-fundo: #02030A;
-    --cor-card: #130d26;
-    --cor-titulo: #0098f7ad;
-    --cor-texto: #a3a1cc;
-    --cor-destaque: #8b5cf6;
-    --cor-brilho: #00f2fe; */
+    --cor-brilho: #00f2fe;
 }
 
 * {
@@ -25,6 +18,7 @@
     list-style: none;
     text-decoration: none;
     color: var(--cor-texto);
+}
 
 .texto-alternativo {
     font-family: var(--fonte-secundaria);
@@ -1858,7 +1852,522 @@ main {
     }
 }
 
-
-
-
 /* #endregion AQUI TERMINA A PÁGINA SERVIÇOS */
+
+
+/* #region AQUI INICIA A PÁGINA PROJETOS */
+
+
+main {
+    width: 100%;
+
+    #projetos-hero {
+        width: 100%;
+        padding: 120px 0 80px;
+        text-align: center;
+
+        .container-full {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .titulo {
+                max-width: 800px;
+                margin-bottom: 20px;
+            }
+
+            hr {
+                width: 70px;
+                margin: 0 auto 25px;
+            }
+
+            p {
+                max-width: 700px;
+                margin: 0 auto;
+                line-height: 1.8;
+            }
+        }
+    }
+
+    #portfolio {
+        width: 100%;
+        padding: 80px 0;
+
+        .container-full {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .titulo {
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            hr {
+                width: 70px;
+                margin: 0 auto 25px;
+            }
+
+            .portfolio-intro {
+                text-align: center;
+                margin-bottom: 40px;
+                line-height: 1.7;
+            }
+
+            .portfolio-filtros {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 12px;
+                flex-wrap: wrap;
+                margin-bottom: 50px;
+
+                button {
+                    padding: 10px 22px;
+                    border: 1px solid var(--cor-destaque);
+                    border-radius: 30px;
+                    background: transparent;
+                    color: var(--cor-texto);
+                    font-family: inherit;
+                    font-size: 14px;
+                    cursor: pointer;
+                    transition: 0.3s ease;
+
+                    &:hover,
+                    &.filtro-ativo {
+                        background: var(--cor-destaque);
+                        color: #fff;
+                    }
+                }
+            }
+
+            .portfolio-grid {
+                width: 100%;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+
+                .projeto-card {
+                    overflow: hidden;
+                    background: var(--cor-card);
+                    border: 1px solid rgba(139, 92, 246, 0.15);
+                    border-radius: 18px;
+                    transition: 0.35s ease;
+
+                    &:hover {
+                        transform: translateY(-8px);
+                        border-color: rgba(139, 92, 246, 0.45);
+                        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+                    }
+
+                    .projeto-imagem {
+                        width: 100%;
+                        height: 230px;
+                        overflow: hidden;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            display: block;
+                            object-fit: cover;
+                            transition: 0.5s ease;
+                        }
+                    }
+
+                    &:hover .projeto-imagem img {
+                        transform: scale(1.05);
+                    }
+
+                    .projeto-info {
+                        padding: 28px;
+
+                        .projeto-tipo {
+                            display: inline-block;
+                            margin-bottom: 12px;
+                            color: var(--cor-destaque);
+                            font-size: 13px;
+                            font-weight: 600;
+                            text-transform: uppercase;
+                            letter-spacing: 0.5px;
+                        }
+
+                        h3 {
+                            margin-bottom: 12px;
+                            color: var(--cor-titulo);
+                            font-size: 22px;
+                        }
+
+                        p {
+                            margin-bottom: 22px;
+                            line-height: 1.7;
+                        }
+
+                        .btn-projeto {
+                            display: inline-flex;
+                            align-items: center;
+                            gap: 7px;
+                            color: var(--cor-titulo);
+                            font-size: 14px;
+                            font-weight: 600;
+                            text-decoration: none;
+                            transition: 0.3s ease;
+
+                            i {
+                                font-size: 20px;
+                                transition: 0.3s ease;
+                            }
+
+                            &:hover {
+                                color: var(--cor-destaque);
+
+                                i {
+                                    transform: translateX(5px);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #projeto-adega {
+        width: 100%;
+        padding: 100px 0;
+
+        .container-full {
+            display: flex;
+            flex-direction: column;
+
+            .projeto-detalhe-intro {
+                max-width: 800px;
+                margin: 0 auto 55px;
+                text-align: center;
+
+                >span {
+                    display: inline-block;
+                    margin-bottom: 15px;
+                    color: var(--cor-destaque);
+                    font-size: 13px;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                }
+
+                .titulo {
+                    margin-bottom: 20px;
+                }
+
+                hr {
+                    width: 70px;
+                    margin: 0 auto 25px;
+                }
+
+                p {
+                    line-height: 1.8;
+                }
+            }
+
+            .projeto-destaque {
+                width: 100%;
+                max-width: 1100px;
+                height: 550px;
+                margin: 0 auto 70px;
+                overflow: hidden;
+                border-radius: 20px;
+                border: 1px solid rgba(139, 92, 246, 0.15);
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    display: block;
+                    object-fit: cover;
+                }
+            }
+
+            .projeto-informacoes {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 25px;
+                margin-bottom: 70px;
+
+                article {
+                    padding: 30px;
+                    background: var(--cor-card);
+                    border: 1px solid rgba(139, 92, 246, 0.15);
+                    border-radius: 18px;
+
+                    >i {
+                        display: inline-flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 50px;
+                        height: 50px;
+                        margin-bottom: 20px;
+                        border-radius: 12px;
+                        background: rgba(139, 92, 246, 0.12);
+                        color: var(--cor-destaque);
+                        font-size: 26px;
+                    }
+
+                    h3 {
+                        margin-bottom: 12px;
+                        color: var(--cor-titulo);
+                        font-size: 20px;
+                    }
+
+                    p {
+                        line-height: 1.7;
+                    }
+                }
+            }
+
+            .projeto-tecnologias {
+                margin-bottom: 70px;
+                text-align: center;
+
+                h3 {
+                    margin-bottom: 25px;
+                    color: var(--cor-titulo);
+                    font-size: 22px;
+                }
+
+                .tecnologias-lista {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 12px;
+                    flex-wrap: wrap;
+
+                    span {
+                        padding: 9px 18px;
+                        border: 1px solid rgba(139, 92, 246, 0.3);
+                        border-radius: 30px;
+                        color: var(--cor-texto);
+                        font-size: 13px;
+                        transition: 0.3s ease;
+
+                        &:hover {
+                            border-color: var(--cor-destaque);
+                            color: var(--cor-destaque);
+                        }
+                    }
+                }
+            }
+
+            .projeto-galeria {
+                width: 100%;
+
+                >h3 {
+                    margin-bottom: 30px;
+                    color: var(--cor-titulo);
+                    font-size: 24px;
+                    text-align: center;
+                }
+
+                .galeria-grid {
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 20px;
+
+                    img {
+                        width: 100%;
+                        height: 280px;
+                        display: block;
+                        object-fit: cover;
+                        border-radius: 15px;
+                        border: 1px solid rgba(139, 92, 246, 0.15);
+                        transition: 0.35s ease;
+
+                        &:hover {
+                            transform: translateY(-5px);
+                            border-color: rgba(139, 92, 246, 0.45);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #cta {
+        width: 100%;
+        padding: 100px 0;
+        text-align: center;
+
+        .container-full {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h2 {
+                max-width: 800px;
+                margin-bottom: 18px;
+                color: var(--cor-titulo);
+                font-size: clamp(28px, 4vw, 42px);
+                line-height: 1.2;
+            }
+
+            p {
+                margin-bottom: 30px;
+                line-height: 1.7;
+            }
+
+            .btn-cta {
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                padding: 14px 28px;
+                border-radius: 30px;
+                background: var(--cor-destaque);
+                color: #fff;
+                font-weight: 600;
+                text-decoration: none;
+                transition: 0.3s ease;
+
+                i {
+                    font-size: 20px;
+                    transition: 0.3s ease;
+                }
+
+                &:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+
+                    i {
+                        transform: translateX(5px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    main {
+
+        #portfolio {
+
+            .container-full {
+
+                .portfolio-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+        }
+
+        #projeto-adega {
+
+            .container-full {
+
+                .projeto-informacoes {
+                    grid-template-columns: 1fr;
+                }
+
+                .projeto-destaque {
+                    height: 450px;
+                }
+
+                .projeto-galeria {
+
+                    .galeria-grid {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    main {
+
+        #projetos,
+        #portfolio,
+        #projeto-adega,
+        #cta {
+            padding: 70px 0;
+        }
+
+        #portfolio {
+
+            .container-full {
+
+                .portfolio-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .portfolio-filtros {
+                    gap: 8px;
+
+                    button {
+                        padding: 9px 16px;
+                        font-size: 13px;
+                    }
+                }
+
+                .projeto-card {
+
+                    .projeto-imagem {
+                        height: 210px;
+                    }
+
+                    .projeto-info {
+                        padding: 22px;
+                    }
+                }
+            }
+        }
+
+        #projeto-adega {
+
+            .container-full {
+
+                .projeto-destaque {
+                    height: 280px;
+                    margin-bottom: 45px;
+                }
+
+                .projeto-informacoes {
+                    gap: 15px;
+                    margin-bottom: 50px;
+
+                    article {
+                        padding: 25px;
+                    }
+                }
+
+                .projeto-galeria {
+
+                    .galeria-grid {
+                        grid-template-columns: 1fr;
+
+                        img {
+                            height: 240px;
+                        }
+                    }
+                }
+            }
+        }
+
+        #cta {
+
+            .container-full {
+
+                h2 {
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+}
+
+
+/* #endregio da pagina projetos */
