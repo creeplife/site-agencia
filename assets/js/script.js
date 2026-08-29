@@ -112,21 +112,12 @@ if (swiperEl) {
 
 // #region MENU HAMBURGUER
 
-const menuIcon = document.getElementById('menu-icon');
-const nav = document.querySelector('header nav');
+const botaoMenu = document.querySelector('.menu-toggle');
+const menuNav = document.querySelector('header .container nav');
 
-if (menuIcon && nav) {
-
-    menuIcon.addEventListener('click', () => {
-
-        nav.classList.toggle('ativo');
-
-        menuIcon.classList.toggle('bx-menu');
-        menuIcon.classList.toggle('bx-x');
-
-    });
-
-}
+botaoMenu.addEventListener('click', () => {
+    menuNav.classList.toggle('ativo');
+});
 
 // #endregion
 

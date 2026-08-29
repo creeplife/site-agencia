@@ -1,66 +1,80 @@
 /* Regras responsivas do site */
 
 @media (max-width: 1025px) {
-    h2,
-    h3,
-    h4 {
+    h2 {
         font-size: 30px;
     }
 
+    h3 {
+        font-size: 24px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
     main {
-        #home .container {
+        #home .container-full {
             .home-txt {
-                width: 70%;
+                width: 90%;
                 padding: 15px;
-            }
-
-            figure {
-                width: 30%;
-
-                img {
-                    width: 250px;
-                }
+                margin: 0 auto;
             }
         }
 
-        #agencias .container,
-        #sobre .container {
+        #sobre .container-full {
             padding: 15px;
-        }
 
-        #sobre .container figure img {
-            width: 400px;
+            .sobre-txt {
+                width: 90%;
+                margin: 0 auto;
+            }
         }
     }
 }
 
-@media (max-width: 769px) {
+@media (max-width: 770px) {
     header {
         .container {
             min-height: 75px;
             height: auto;
             flex-wrap: wrap;
             padding: 10px 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            /* Garante o alinhamento do menu absoluto */
         }
 
+        /* CORREÇÃO: O nav agora começa escondido (display: none) no celular */
         .container nav {
             order: 3;
             flex: 1 0 100%;
-            display: flex;
+            display: none;
+            /* ESCONDE O MENU POR PADRÃO */
             flex-direction: column;
             align-items: stretch;
             justify-content: center;
             gap: 14px;
-            position: static;
             width: 100%;
             min-width: 0;
             padding: 15px 0;
-            transform: none;
+            background-color: #333;
+            /* Fundo escuro para o menu celular */
+        }
+
+        /* CORREÇÃO: Classe que o JavaScript vai ativar para MOSTRAR o nav */
+        .container nav.ativo {
+            display: flex;
         }
 
         .container nav a {
             text-align: center;
             overflow-wrap: anywhere;
+            color: white;
+            /* Garante leitura sobre o fundo escuro */
+            padding: 10px 0;
         }
 
         .container .header-botao {
@@ -68,96 +82,77 @@
             margin-right: 0;
             padding: 10px;
         }
+    }
 
-        .container #menu-icon {
-            display: none;
-        }
+    /* CORREÇÃO: Garante que o botão hambúrguer apareça no celular */
+    .menu-toggle {
+        display: block !important;
+        font-size: 30px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        text-shadow: 0 0 10px var(--cor-destaque);
+        transition: all 0.4s ease;
+    }
+
+    .menu-toggle:hover {
+        color: var(--cor-brilho);
+        transform: scale(1.05);
+        text-shadow: 0 0 5px var(--cor-destaque),
+            0 0 20px var(--cor-destaque),
+            0 0 20px var(--cor-destaque);
+        transform: scale(1.08) rotate(-180deg);
+        filter: drop-shadow(0 0 12px #00e5ff);
     }
 
     main {
-        #home.container {
-            flex-direction: column-reverse;
-            justify-content: flex-start;
-
-            figure {
-                width: 100%;
-                height: 40%;
-
-                img {
-                    width: 250px;
-                    max-width: 100%;
-                }
-            }
-
+        #home .container-full {
             .home-txt {
-                width: 80%;
-                height: 50%;
+                width: 100%;
+                text-align: center;
+                padding: 20px;
+                margin-top: 15%;
 
                 h1 {
-                    font-size: 25px;
-
-                    span {
-                        font-size: 25px;
-                    }
+                    font-size: 28px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
                 }
             }
         }
 
         #sobre {
             height: auto;
-            min-height: 80dvh;
+            min-height: auto;
+            padding: 40px 20px;
 
-            .container {
-                flex-direction: column;
-
-                figure,
+            .container-full {
                 .sobre-txt {
-                    width: 90%;
-                    height: auto;
+                    width: 100%;
+                    text-align: center;
                 }
             }
         }
 
-        #diferenciais,
-        #como-funciona,
-        #entrega {
+        #servicos {
+            swiper-container {
+                width: 100%;
+                padding-bottom: 30px;
+            }
+
+            .box {
+                padding: 20px;
+                text-align: center;
+            }
+        }
+
+        #diferenciais {
             .grid-diferenciais {
                 grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 0 15px;
             }
-        }
-
-        #integracoes {
-            .servicos-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        #manutencao {
-            .manutencao-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        #como-escolher {
-            .escolha-lista,
-            .servicos-cta {
-                width: 100%;
-            }
-
-            .escolha-item {
-                grid-template-columns: 50px minmax(0, 1fr);
-                width: 100%;
-
-                span {
-                    grid-column: 2;
-                    justify-self: start;
-                    max-width: 100%;
-                }
-            }
-        }
-
-        #portfolio .portfolio-grid {
-            grid-template-columns: 1fr;
         }
 
         h1,
@@ -170,23 +165,6 @@
             overflow-wrap: anywhere;
         }
     }
-
-    footer {
-        height: auto;
-        min-height: 40dvh;
-        padding: 25px;
-
-        .container {
-            flex-direction: column;
-        }
-
-        .footerContato {
-            position: static;
-            transform: none;
-            margin-top: 20px;
-            text-align: center;
-        }
-    }
 }
 
 @media (max-width: 480px) {
@@ -194,36 +172,23 @@
         gap: 10px;
     }
 
-    main #home .container {
-        figure {
-            height: 40%;
-            align-items: flex-end;
+    /* CORREÇÃO: Removidos os blocos que quebravam o comportamento em telas menores */
 
-            img {
-                width: 200px;
-            }
-        }
+    main {
+        padding: 40px 15px;
 
-        .home-txt {
-            width: 100%;
-
-            h1 {
-                flex-direction: column;
+        #home .container-full {
+            .home-txt h1 {
+                font-size: 24px;
 
                 span {
                     margin-left: 0;
-                    padding: 15px 0;
+                    padding: 5px 0;
                 }
             }
         }
     }
-
-    main {
-        padding: 12% 5%;
-
-        #como-escolher .escolha-item {
-            gap: 12px;
-            padding: 16px;
-        }
-    }
+}
+.menu-toggle {
+    display: none; 
 }

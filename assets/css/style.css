@@ -332,7 +332,29 @@ header {
 
 /* #endregion */
 
-/* #region Animação do logo que flutua no home, aumentando e diminuindo de tamanho */
+/* #region Animação  */
+
+    @keyframes balanco-tremer {
+        0% {
+            transform: scale(0.89) rotate(0deg);
+        }
+
+        25% {
+            transform: scale(0.89) rotate(3deg);
+        }
+
+        /* Gira para +3° */
+        75% {
+            transform: scale(0.89) rotate(-3deg);
+        }
+
+        /* Gira para -3° */
+        100% {
+            transform: scale(0.89) rotate(0deg);
+        }
+    }
+
+    
 @keyframes floating {
 
     0%,
@@ -1346,17 +1368,28 @@ footer {
         text-align: center;
     }
 
+    /* CORREÇÃO: Alinhamento perfeito e inteligente para 5 cards */
     .grid-diferenciais {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        display: flex;
+        flex-wrap: wrap;        /* Permite que os cards quebrem de linha se não couberem */
         gap: 30px;
+        width: 100%;
+        max-width: 1400px;     /* Largura ideal para acomodar até 4 ou 5 cards alinhados */
+        margin: 0 auto;        /* Centraliza o bloco inteiro na tela */
+        padding: 0 20px;       /* Margem de segurança nas laterais */
+        justify-content: center; /* MÁGICA: Centraliza os cards que sobrarem na última linha */
     }
 
     .card-diferencial {
         height: 300px;
         position: relative;
         perspective: 1000px;
+        /* Define a largura base de cada card (mínimo 280px, máximo 1fr) */
+        flex: 1 1 280px;       
+        max-width: 320px;      /* Impede que os cards da última linha fiquem gigantes e esticados */
+        width: 100%;
     }
+
 
     .card-frente,
     .card-verso {
@@ -1421,6 +1454,7 @@ footer {
     max-width: 850px;
     margin: 0 auto 70px;
     text-align: center;
+   
 
     .processos-intro {
         max-width: 850px;
@@ -1548,7 +1582,7 @@ footer {
 
     .titulo {
         h2 {
-            color: var(--cor-titulo);
+             color: var(--cor-destaque);
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 12px;
@@ -1609,8 +1643,8 @@ footer {
         article:hover {
             transform: translateY(-8px);
             border-color: var(--cor-destaque);
-            box-shadow: 0 12px 30px rgba(4, 2, 11, 0.8), 
-                        0 0 20px rgba(99, 68, 227, 0.2);
+            box-shadow: 0 12px 30px rgba(4, 2, 11, 0.8),
+                0 0 20px rgba(99, 68, 227, 0.2);
 
             i {
                 transform: scale(1.15) rotate(5deg);
@@ -1625,7 +1659,6 @@ footer {
 
 /* #region AQUI INICIA A PÁGINA SERVIÇOS, COM ESTILIZAÇÃO DO MESMO */
 main {
-    padding: 7%;
     width: 100%;
     display: flex;
     align-items: stretch;
@@ -1668,7 +1701,7 @@ main {
         font-size: 20px;
         align-items: center;
         max-width: 500px;
-        margin: 0 auto;
+        margin: 5%;
 
     }
 
@@ -1685,13 +1718,13 @@ main {
     .servico-conteudo {
         width: 100%;
         display: flex;
-        align-items: stretch;
+        align-items: center;
         justify-content: center;
         gap: 30px;
 
         .servico-texto {
-            width: 45%;
-            padding: 30px;
+            width: 25%;
+            padding: 25px;
             background-color: var(--cor-card);
             border: 1px solid var(--cor-destaque);
             border-radius: 10px;
@@ -1777,11 +1810,11 @@ main {
             align-items: stretch;
             justify-content: center;
             flex-direction: column;
-                        margin-right: 10%;
+            margin-right: 10%;
 
         }
-        
-.servico-texto {
+
+        .servico-texto {
             width: 20%;
         }
     }
@@ -1834,12 +1867,13 @@ main {
                 }
 
                 p {
-                    font-size: 15px;
+                    font-size: 18px;
+                    text-align: center;
                 }
             }
 
             .servico-card:hover {
-                transform: scale(1.05);
+                transform: scale(1.5);
                 border-color: var(--cor-brilho);
                 box-shadow: var(--cor-destaque) 0px 0px 25px;
             }
@@ -1890,21 +1924,28 @@ main {
 
                 h3 {
                     margin-bottom: 10px;
-                    font-size: 18px;
+                    font-size: 20px;
                 }
 
                 p {
-                    font-size: 14px;
+                    font-size: 18px;
+                    text-align: center;
                 }
             }
 
             article:hover {
-                transform: scale(1.05);
+                transform: scale(1.5);
                 border-color: var(--cor-brilho);
                 box-shadow: var(--cor-destaque) 0px 0px 25px;
             }
+
+            article:hover p {
+                display: block;
+                animation: balanco-tremer 2s infinite linear;
+            }
         }
     }
+
 
 
     #como-escolher {
@@ -1968,7 +2009,7 @@ main {
                 }
 
                 p {
-                    font-size: 16px;
+                    font-size: 18px;
                 }
 
                 span {
@@ -1978,14 +2019,19 @@ main {
                     border-radius: 20px;
 
                     color: var(--cor-destaque);
-                    font-size: 13px;
+                    font-size: 20px;
                 }
+
             }
 
             .escolha-item:hover {
-                transform: scale(1.02);
+                transform: scale(1.05);
                 border-color: var(--cor-brilho);
                 box-shadow: var(--cor-destaque) 0px 0px 20px;
+            }
+
+            .escolha-item:hover span {
+                transform: scale(1.08) rotate(10deg);
             }
         }
 
@@ -2002,12 +2048,13 @@ main {
 
             h2 {
                 margin-bottom: 15px;
-                font-size: 25px;
+                font-size: 30px;
             }
 
             p {
-                margin-bottom: 25px;
-                font-size: 16px;
+                margin-bottom: 30px;
+                font-size: 18px;
+                text-align: center;
             }
 
             .btn-cta {
@@ -2023,14 +2070,14 @@ main {
                 border-radius: 7px;
 
                 color: var(--cor-brilho);
-                font-size: 15px;
+                font-size: 20px;
 
                 transition: .5s;
             }
 
             .btn-cta:hover {
                 cursor: pointer;
-                transform: scale(1.1);
+                transform: scale(1.5);
                 background-color: transparent;
                 color: var(--cor-destaque);
             }
