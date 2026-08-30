@@ -31,284 +31,455 @@
 </head>
 
 <body>
-
     <!-- ACESSIBILIDADE EM LIBRAS -->
+
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
+
         <div vw-plugin-wrapper>
             <div class="vw-plugin-top-wrapper"></div>
         </div>
     </div>
+
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
     <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
+        new window.VLibras.Widget(
+            'https://vlibras.gov.br/app'
+        );
     </script>
+
     <div id="topo"></div>
 
     <header>
 
         <div class="container">
-            <a href="#topo">
+            <!-- Logo -->
+            <a href="./index.html">
                 <img src="./assets/img/favicon.png" alt="NEXO Web">
             </a>
 
-<!-- Botão Hambúrguer (Visível apenas no celular) -->
-<button class="menu-toggle">☰</button>
-
-<!-- Menu de Navegação -->
-<nav class="menu-navegacao" id="menuNavegacao">
+            <!-- Menu -->
+            <nav>
                 <a href="./index.html">Início</a>
                 <a href="./sobre.html">Sobre</a>
-                <a href="./servicos.html">Serviços</a>
+                <a href="./servicos.html"> Serviços</a>
                 <a href="./como-funciona.html">Como Funciona</a>
                 <a href="./projetos.html">Projetos</a>
             </nav>
 
+            <!-- Botão -->
             <div class="header-botao">
-                <b><a href="./contato.html" class="btn-header">Fale Conosco</a></b>
+                <a href="./contato.html" class="btn-header">Fale Conosco</a>
             </div>
         </div>
+
     </header>
 
     <main>
 
         <section id="home">
-            <div class="container-full">
-                <div class="home-txt">
-                    <h1>NEXO Web <span id="autodigit"></span></h1>
-                    <p>Sites profissionais para empresas que querem crescer, conquistar clientes e fortalecer sua
-                        presença digital.</p>
+            <div class="container-full home-container">
+                <div class="home-txt" data-aos="fade-right">
+                    <h1>
+                        NEXO Web
+                        <span id="autodigit"></span>
+                    </h1>
+                    <p>
+                        Sites profissionais para empresas que querem crescer, conquistar clientes e fortalecer sua
+                        presença digital.
+                    </p>
+                    <div class="home-botoes">
+                        <a href="./contato.html" class="btn-principal"> Começar meu projeto </a>
+
+                        <a href="./projetos.html" class="btn-secundario"> Ver projetos </a>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SOBRE -->
+        <section id="sobre" class="secao-sobre">
+            <div class="container">
+                <div class="sobre-imagem" data-aos="fade-right">
+                    <div class="sobre-card-visual">
+                        <img src="./assets/img/favicon.png" alt="NEXO Web">
+                    </div>
+                </div>
+
+                <div class="textoSobre" data-aos="fade-left">
+                    <h2 class="titulo"> Somos a <span>NEXO Web</span></h2>
+                    <hr>
+                    <p>
+                        Uma agência digital focada em criar sites modernos, funcionais e personalizados para empresas
+                        que querem fortalecer sua presença na internet.
+                    </p>
+                    <br>
+                    <p>
+                        Mais do que desenvolver sites, criamos experiências digitais que aproximam marcas de seus
+                        clientes.
+                    </p>
+                    <div class="sobre-pilares">
+                        <span>Design</span>
+                        <strong>+</strong>
+                        <span>Tecnologia</span>
+                        <strong>+</strong>
+                        <span>Estratégia</span>
+                    </div>
+                    <a href="./sobre.html" class="btn-secao">Conheça mais a NEXO Web</a>
                 </div>
             </div>
         </section>
 
-        <section id="sobre">
-            <h2 class="titulo">Somos a <span>NEXO Web</span></h2>
-            <hr>
-            <div class="container-full">
-                <div class="sobre-txt">
-
-                    <p>Uma agência digital focada em criar sites modernos, funcionais e personalizados para empresas que
-                        querem fortalecer sua presença na internet.
-                        Mais do que desenvolver sites, criamos experiências digitais que aproximam marcas de seus
-                        clientes.</p>
-                    <p> Design + Tecnologia + Estratégia.
+        <!-- SERVIÇOS -->
+        <section id="servicos" class="secao-servicos">
+            <div class="container">
+                <div class="cabecalho-secao">
+                    <h2 class="titulo">
+                        Nossos
+                        <span>Serviços</span>
+                    </h2>
+                    <hr>
+                    <p class="subtitulo-secao">
+                        Soluções digitais pensadas para
+                        apresentar sua empresa, conquistar
+                        clientes e gerar novas oportunidades.
                     </p>
+                </div>
 
-                    <a href="./sobre.html">
-                        <button> Conheça mais a NEXO Web</button>
+                <div class="grid-servicos">
+                    <!-- SERVIÇO 1 -->
+                    <div class="box" data-aos="fade-up">
+                        <div class="icone-servico">
+                            <i class='bx bx-globe'></i>
+                        </div>
+                        <h3>
+                            Sites institucionais
+                        </h3>
+                        <p>
+                            Apresente sua empresa, seus serviços
+                            e seus diferenciais através de um
+                            site profissional.
+                        </p>
+                    </div>
+
+                    <!-- SERVIÇO 2 -->
+                    <div class="box" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icone-servico">
+                            <i class='bx bx-target-lock'></i>
+                        </div>
+                        <h3>
+                            Landing Pages
+                        </h3>
+                        <p>
+                            Páginas desenvolvidas para campanhas,
+                            produtos, serviços e geração de
+                            oportunidades.
+                        </p>
+                    </div>
+
+                    <!-- SERVIÇO 3 -->
+                    <div class="box" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icone-servico">
+                            <i class='bx bx-book-open'></i>
+                        </div>
+                        <h3>
+                            Catálogos Digitais
+                        </h3>
+                        <p>
+                            Apresente seus produtos de forma
+                            organizada, visual e acessível.
+                        </p>
+                    </div>
+
+                    <!-- SERVIÇO 4 -->
+                    <div class="box" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icone-servico">
+                            <i class='bx bx-link-alt'></i>
+                        </div>
+                        <h3>
+                            Integrações
+                        </h3>
+                        <p>
+                            Conecte seu site ao WhatsApp, mapas,
+                            redes sociais e outras ferramentas.
+                        </p>
+                    </div>
+
+                    <!-- SERVIÇO 5 -->
+                    <div class="box" data-aos="fade-up" data-aos-delay="400">
+                        <div class="icone-servico">
+                            <i class='bx bx-wrench'></i>
+                        </div>
+                        <h3>
+                            Manutenção
+                        </h3>
+                        <p>
+                            Mantenha seu site atualizado, seguro
+                            e funcionando corretamente.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="botao-secao">
+                    <a href="./servicos.html" class="btn-secao">
+                        Conheça nossos serviços
                     </a>
                 </div>
             </div>
         </section>
-        <!-- CARROSSEL -->
-        <section id="servicos">
-            <h2 class="titulo"><span>Serviços</span>
-                <hr>
-            </h2>
+
+        <!-- DIFERENCIAIS -->
+        <section id="diferenciais" class="secao-diferenciais">
             <div class="container">
+                <div class="cabecalho-secao">
+                    <h2 class="titulo">
+                        Por que a <span>NEXO</span>?
+                    </h2>
+                    <hr><br>
+                    <p class="subtitulo-secao">
+                        Seu negócio não precisa apenas de um
+                        site. Precisa de uma presença digital
+                        que transmita confiança.
+                    </p>
+                </div>
 
-                <swiper-container class="mySwiper" init="false" pagination="true" pagination-clickable="true">
-
-                    <swiper-slide>
-                        <div class="box">
-                            <i class='bx bx-globe'></i>
-                            <h3><span>Sites institucionais</span></h3>
-                            <p>Apresente sua empresa, seus serviços e seus diferenciais através de um site profissional.
+                <div class="container grid-diferenciais">
+                    <!-- CARD 1 -->
+                    <div class="card-diferencial">
+                        <div class="card-frente">
+                            <div class="icone-diferencial">
+                                <i class='bx bx-paint'></i>
+                            </div>
+                            <h3>Design personalizado</h3>
+                        </div>
+                        <div class="card-verso">
+                            <p>
+                                Nada de site genérico. Criamos um visual exclusivo que combina com a identidade e o
+                                público
+                                do seu negócio.
                             </p>
                         </div>
-                    </swiper-slide>
+                    </div>
 
-                    <swiper-slide>
-                        <div class="box">
-                            <i class='bx bx-target-lock'></i>
-                            <h3><span>Landing Pages</span></h3>
-                            <p>Páginas desenvolvidas para campanhas, produtos, serviços e geração de oportunidades.</p>
+                    <!-- CARD 2 -->
+                    <div class="card-diferencial">
+                        <div class="card-frente">
+                            <div class="icone-diferencial">
+                                <i class='bx bx-user-voice'></i>
+                            </div>
+                            <h3>Experiência do usuário</h3>
                         </div>
-                    </swiper-slide>
+                        <div class="card-verso">
+                            <p>
+                                Pensamos em quem vai acessar. Seu cliente encontra as informações importantes de forma
+                                rápida e intuitiva.
+                            </p>
+                        </div>
+                    </div>
 
-                    <swiper-slide>
-                        <div class="box">
-                            <i class='bx bx-book-open'></i>
-                            <h3><span>Catálogos Digitais</span></h3>
-                            <p>Apresente seus produtos de forma organizada, visual e acessível.</p>
+                    <!-- CARD 3 -->
+                    <div class="card-diferencial">
+                        <div class="card-frente">
+                            <div class="icone-diferencial">
+                                <i class='bx bx-mobile-alt'></i>
+                            </div>
+                            <h3>Responsividade</h3>
                         </div>
-                    </swiper-slide>
+                        <div class="card-verso">
+                            <p>
+                                Seu site funcionando perfeitamente em todas as telas: celular, tablet e computador.
+                            </p>
+                        </div>
+                    </div>
 
-                    <swiper-slide>
-                        <div class="box">
-                            <i class='bx bx-link-alt'></i>
-                            <h3><span>Integrações</span></h3>
-                            <p>Conecte seu site ao WhatsApp, mapas, redes sociais e outras ferramentas.</p>
+                    <!-- CARD 4 -->
+                    <div class="card-diferencial">
+                        <div class="card-frente">
+                            <div class="icone-diferencial">
+                                <i class='bx bx-trending-up'></i>
+                            </div>
+                            <h3>Estratégia</h3>
                         </div>
-                    </swiper-slide>
-
-                    <swiper-slide>
-                        <div class="box">
-                            <i class='bx bx-wrench'></i>
-                            <h3><span>Manutenção</span></h3>
-                            <p>Mantenha seu site atualizado, seguro e funcionando corretamente.</p>
+                        <div class="card-verso">
+                            <p>
+                                Cada elemento do site tem um propósito: guiar o visitante até ele entrar em contato com
+                                você.
+                            </p>
                         </div>
-                    </swiper-slide>
-                </swiper-container>
-                <a href="./servicos.html">
-                    <button>Conheça nossos serviços</button>
+                    </div>
+                </div>
+                <a href="#servicos">
+                    <button> Conheça a NEXO</button>
                 </a>
-            </div>
-
-        </section>
-        <!-- CARD FRENTE E VERSO -->
-        <section id="diferenciais">
-            <h2 class="titulo"> Por que a NEXO? </h2>
-            <hr><br>
-            <p class="subtitulo-secao">
-                Seu negócio não precisa apenas de um site. Precisa de uma presença digital que transmita confiança.
-            </p>
-
-            <div class="container grid-diferenciais">
-                <!-- CARD 1 -->
-                <div class="card-diferencial">
-                    <div class="card-frente">
-                        <div class="icone-diferencial">
-                            <i class='bx bx-paint'></i>
-                        </div>
-                        <h3>Design personalizado</h3>
-                    </div>
-                    <div class="card-verso">
-                        <p>
-                            Nada de site genérico. Criamos um visual exclusivo que combina com a identidade e o público
-                            do seu negócio.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- CARD 2 -->
-                <div class="card-diferencial">
-                    <div class="card-frente">
-                        <div class="icone-diferencial">
-                            <i class='bx bx-user-voice'></i>
-                        </div>
-                        <h3>Experiência do usuário</h3>
-                    </div>
-                    <div class="card-verso">
-                        <p>
-                            Pensamos em quem vai acessar. Seu cliente encontra as informações importantes de forma
-                            rápida e intuitiva.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- CARD 3 -->
-                <div class="card-diferencial">
-                    <div class="card-frente">
-                        <div class="icone-diferencial">
-                            <i class='bx bx-mobile-alt'></i>
-                        </div>
-                        <h3>Responsividade</h3>
-                    </div>
-                    <div class="card-verso">
-                        <p>
-                            Seu site funcionando perfeitamente em todas as telas: celular, tablet e computador.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- CARD 4 -->
-                <div class="card-diferencial">
-                    <div class="card-frente">
-                        <div class="icone-diferencial">
-                            <i class='bx bx-trending-up'></i>
-                        </div>
-                        <h3>Estratégia</h3>
-                    </div>
-                    <div class="card-verso">
-                        <p>
-                            Cada elemento do site tem um propósito: guiar o visitante até ele entrar em contato com
-                            você.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <a href="#servicos">
-                <button> Conheça a NEXO</button>
-            </a>
         </section>
 
-        <section id="projetos">
-            <h2 class="titulo"> Projetos que criam conexões </h2>
-            <hr><br>
-            <p class="subtitulo-secao">
-                Cada projeto é desenvolvido para representar a identidade e os objetivos de cada negócio.
-            </p>
-            <a href="./projetos.html">
-                <button> Projetos da NEXO</button>
-            </a>
-        </section>
-
-        <section id="como-funciona">
-            <h2 class="titulo"> Como funciona </h2>
-            <hr><br>
-            <div class="container grid-diferenciais">
-                <!-- CARD 1 -->
-                <div class="card-diferencial">
-                    <div class="card-frente">
-                        <div class="icone-diferencial">
-                            <i class='bx bx-paint'></i>
-                        </div>
-                        <h3>01.<br> ENTENDEMOS</h3>
-                    </div>
-                    <div class="card-verso">
-                        <p>
-                            Conhecemos seu negócio e seus objetivos.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- CARD 2 -->
-                <div class="card-diferencial">
-                    <div class="card-frente">
-                        <div class="icone-diferencial">
-                            <i class='bx bx-user-voice'></i>
-                        </div>
-                        <h3>02.<br> PLANEJAMOS</h3>
-                    </div>
-                    <div class="card-verso">
-                        <p>
-                            Definimos estrutura e estratégia.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- CARD 3 -->
-                <div class="card-diferencial">
-                    <div class="card-frente">
-                        <div class="icone-diferencial">
-                            <i class='bx bx-mobile-alt'></i>
-                        </div>
-                        <h3>03.<br> DESENVOLVEMOS</h3>
-                    </div>
-                    <div class="card-verso">
-                        <p>
-                            Seu site funcionando perfeitamente em todas as telas: celular, tablet e computador.
-                        </p>
-                    </div>
-                </div>
-                    </div>
-        </section>
-
-        <section id="cta">
-            <div class="cta-content">
-
-                <p>Seu próximo cliente pode estar procurando por você agora.</p>
-
-                <p>Vamos criar essa conexão?</p>
-                <br>
-                <b>
-                    <p>
-                        <a href="./contato.html" class="btn-cta" id="autodigit1"></a>
+        <!-- PROJETOS -->
+        <section id="projetos" class="secao-projetos">
+            <div class="container">
+                <div class="cabecalho-secao">
+                    <h2 class="titulo"> Projetos que criam <span>conexões</span>
+                    </h2>
+                    <hr>
+                    <p class="subtitulo-secao">
+                        Cada projeto é desenvolvido para
+                        representar a identidade e os objetivos
+                        de cada negócio.
                     </p>
-                </b>
+                </div>
 
+                <div class="grid-projetos">
+                    <!-- PROJETO 1 -->
+                    <div class="projeto-card" data-aos="fade-up">
+                        <div class="projeto-imagem">
+                            <span>PROJETO 01 </span>
+                        </div>
+                        <div class="projeto-info">
+                            <span> SITE INSTITUCIONAL</span>
+                            <h3>Projeto NEXO</h3>
+                        </div>
+                    </div>
+
+                    <!-- PROJETO 2 -->
+                    <div class="projeto-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="projeto-imagem">
+                            <span> PROJETO 02</span>
+                        </div>
+                        <div class="projeto-info">
+                            <span> LANDING PAGE</span>
+                            <h3>Projeto NEXO</h3>
+                        </div>
+                    </div>
+
+                    <!-- PROJETO 3 -->
+                    <div class="projeto-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="projeto-imagem">
+                            <span>PROJETO 03</span>
+                        </div>
+                        <div class="projeto-info">
+                            <span> PROJETO DIGITAL</span>
+                            <h3>Projeto NEXO</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="botao-secao">
+                    <a href="./projetos.html" class="btn-secao">
+                        Ver projetos
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMO FUNCIONA -->
+        <section id="como-funciona" class="secao-como-funciona">
+            <div class="container">
+
+                <div class="cabecalho-secao">
+                    <h2 class="titulo">Como <span>funciona</span></h2>
+                    <hr>
+                </div>
+
+                <div class="grid-processo">
+
+                    <div class="processo-card" data-aos="fade-up">
+                        <div class="processo-frente">
+                            <span class="processo-numero">
+                                01
+                            </span>
+                            <div class="icone-diferencial">
+                                <i class='bx bx-message-rounded-detail'></i>
+                            </div>
+                            <h3>ENTENDEMOS</h3>
+                        </div>
+
+                        <div class="processo-verso">
+                            <span class="processo-numero">
+                                01
+                            </span>
+                            <h3>ENTENDEMOS</h3>
+                            <p>
+                                Conhecemos seu negócio e seus
+                                objetivos para entender exatamente
+                                o que você precisa.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="processo-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="processo-frente">
+                            <span class="processo-numero">
+                                02
+                            </span>
+                            <div class="icone-diferencial">
+                                <i class='bx bx-bulb'></i>
+                            </div>
+                            <h3>PLANEJAMOS</h3>
+                        </div>
+
+                        <div class="processo-verso">
+                            <span class="processo-numero">
+                                02
+                            </span>
+                            <h3>PLANEJAMOS</h3>
+                            <p>
+                                Definimos a estrutura, o conteúdo
+                                e a estratégia ideal para o seu site.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="processo-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="processo-frente">
+                            <span class="processo-numero">
+                                03
+                            </span>
+                            <div class="icone-diferencial">
+                                <i class='bx bx-code-alt'></i>
+                            </div>
+                            <h3>DESENVOLVEMOS</h3>
+                        </div>
+
+                        <div class="processo-verso">
+                            <span class="processo-numero">
+                                03
+                            </span>
+                            <h3>DESENVOLVEMOS</h3>
+                            <p>
+                                Transformamos o planejamento em
+                                um site profissional, moderno e
+                                responsivo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="botao-secao">
+                    <a href="./como-funciona.html" class="btn-secao">Saiba como funciona</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section id="cta">
+            <div class="container">
+                <div class="cta-content">
+                    <span class="titulo-pequeno">
+                        VAMOS CONVERSAR?
+                    </span>
+                    <h2>
+                        Seu próximo cliente pode estar
+                        procurando por você agora.
+                    </h2>
+                    <p>
+                        Vamos criar essa conexão?
+                    </p>
+                    <a href="./contato.html" class="btn-cta">
+                        Fale com a NEXO
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -328,17 +499,29 @@
     </footer>
 
 
-    <!-- __________Links do JS e sei lá o que__________ -->
 
+    <!-- JAVASCRIPT -->
+    <!-- AOS JS -->
 
-    <!-- Link AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <!-- Link do script do carrossel -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-element-bundle.min.js"></script>
 
-    <!-- Link para o meu script -->
+    <!-- Inicialização do AOS -->
+
+    <script>
+
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+
+    </script>
+
+
+    <!-- Seu JavaScript -->
+
     <script src="./assets/js/script.js"></script>
+
 
 </body>
 
