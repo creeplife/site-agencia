@@ -67,13 +67,6 @@ autoDigit("autodigit", [
 ]);
 
 
-autoDigit("autodigit1", [
-    "Fale com a NEXO",
-    "Vamos conversar?",
-    "Comece seu projeto",
-    "Conecte-se com a NEXO"
-]);
-
 // #endregion
 
 
@@ -112,11 +105,11 @@ if (swiperEl) {
 
 // #region MENU HAMBURGUER
 
-const botaoMenu = document.querySelector('.menu-toggle');
-const menuNav = document.querySelector('header .container nav');
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('nav');
 
-botaoMenu.addEventListener('click', () => {
-    menuNav.classList.toggle('ativo');
+menuToggle.addEventListener('click', () => {
+    nav.classList.toggle('ativo');
 });
 
 // #endregion

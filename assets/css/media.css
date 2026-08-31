@@ -1,194 +1,2206 @@
-/* Regras responsivas do site */
+/* =========================================================
+   RESPONSIVIDADE DO SITE
+   ========================================================= */
+
+/* #region TABLET E NOTEBOOK */
 
 @media (max-width: 1025px) {
+
+    .container {
+        width: 95%;
+    }
+
+    .container-full {
+        width: 90%;
+        max-width: 90%;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
     h2 {
-        font-size: 30px;
+        font-size: 28px;
     }
 
     h3 {
-        font-size: 24px;
+        font-size: 22px;
     }
 
-    h4 {
-        font-size: 20px;
-    }
 
-    main {
-        #home .container-full {
-            .home-txt {
-                width: 90%;
-                padding: 15px;
-                margin: 0 auto;
-            }
-        }
+    /* #region HEADER */
 
-        #sobre .container-full {
-            padding: 15px;
-
-            .sobre-txt {
-                width: 90%;
-                margin: 0 auto;
-            }
-        }
-    }
-}
-
-@media (max-width: 770px) {
     header {
+
         .container {
-            min-height: 75px;
-            height: auto;
-            flex-wrap: wrap;
-            padding: 10px 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: relative;
-            /* Garante o alinhamento do menu absoluto */
+            width: 95%;
+            padding: 0 15px;
         }
 
-        /* CORREÇÃO: O nav agora começa escondido (display: none) no celular */
         .container nav {
-            order: 3;
-            flex: 1 0 100%;
-            display: none;
-            /* ESCONDE O MENU POR PADRÃO */
-            flex-direction: column;
-            align-items: stretch;
-            justify-content: center;
-            gap: 14px;
-            width: 100%;
-            min-width: 0;
-            padding: 15px 0;
-            background-color: #333;
-            /* Fundo escuro para o menu celular */
+            gap: 25px;
+
+            a {
+                font-size: 17px;
+            }
         }
 
-        /* CORREÇÃO: Classe que o JavaScript vai ativar para MOSTRAR o nav */
-        .container nav.ativo {
-            display: flex;
-        }
-
-        .container nav a {
-            text-align: center;
-            overflow-wrap: anywhere;
-            color: white;
-            /* Garante leitura sobre o fundo escuro */
-            padding: 10px 0;
-        }
-
-        .container .header-botao {
-            flex: 0 1 auto;
-            margin-right: 0;
+        .header-botao {
             padding: 10px;
         }
     }
 
-    /* CORREÇÃO: Garante que o botão hambúrguer apareça no celular */
+    /* #endregion */
+
+
+    /* #region HOME */
+
+    main {
+
+        #home {
+            min-height: 650px;
+
+            .container-full {
+                width: 90%;
+                gap: 30px;
+
+                .home-txt {
+                    width: 60%;
+
+                    h1 {
+                        font-size: 45px;
+
+                        span {
+                            font-size: 24px;
+                            width: 26ch;
+                        }
+                    }
+
+                    p {
+                        font-size: 18px;
+                    }
+                }
+
+                &::after {
+                    width: 40%;
+                    height: 300px;
+                }
+            }
+        }
+
+        /* #endregion */
+
+
+        /* #region SOBRE */
+
+        #sobre {
+
+            .container {
+                width: 90%;
+                gap: 30px;
+
+                .sobre-imagem {
+                    width: 40%;
+                }
+
+                .textoSobre {
+                    width: 60%;
+
+                    h2 {
+                        font-size: 30px;
+                    }
+
+                    p {
+                        font-size: 15px;
+                    }
+                }
+
+                .sobre-pilares {
+                    flex-wrap: wrap;
+                    justify-content: center;
+                }
+            }
+        }
+
+        /* #endregion */
+
+
+        /* #region SERVIÇOS */
+
+        #servicos {
+
+            .container {
+                width: 90%;
+
+                .cabecalho-secao {
+
+                    .subtitulo-secao {
+                        width: 90%;
+                    }
+                }
+
+                .grid-servicos {
+
+                    .box {
+                        width: 280px;
+                    }
+                }
+            }
+        }
+
+        /* #endregion */
+
+
+        /* #region DIFERENCIAIS */
+
+        #diferenciais {
+
+            .container {
+                width: 90%;
+            }
+
+            .grid-diferenciais {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* #endregion */
+
+
+        /* #region PROJETOS */
+
+        #projetos {
+
+            .container {
+                width: 90%;
+            }
+
+            .grid-projetos {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* #endregion */
+
+
+        /* #region COMO FUNCIONA */
+
+        #como-funciona {
+            padding: 80px 30px;
+
+            .container {
+                width: 90%;
+            }
+
+            .grid-processo {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+
+            .botao-secao {
+                width: 40% !important;
+            }
+        }
+
+        /* #endregion */
+
+
+        /* #region CTA */
+
+        #cta {
+
+            .container {
+                width: 80%;
+            }
+
+            .cta-content {
+
+                h2 {
+                    font-size: 35px;
+                }
+
+                p {
+                    font-size: 22px;
+                }
+
+                .btn-cta {
+                    width: 60%;
+                }
+            }
+        }
+
+        /* #endregion */
+
+
+        /* #region SERVIÇOS PÁGINA */
+
+        .servico-conteudo {
+
+            .servico-texto {
+                width: 40%;
+            }
+        }
+
+
+        #landing-pages,
+        #catalogos {
+
+            .servico-texto {
+                width: 40% !important;
+            }
+        }
+
+
+        #integracoes {
+
+            .servicos-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+
+        #manutencao {
+
+            .manutencao-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+
+        #como-escolher {
+
+            .escolha-lista {
+
+                .escolha-item {
+                    width: 90%;
+                }
+            }
+        }
+
+        /* #endregion */
+
+
+        /* #region CONTATO */
+
+        #contato {
+
+            .container-full {
+                gap: 30px;
+
+                figure {
+                    width: 40%;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        /* #endregion */
+
+
+        /* #region SOBRE PÁGINA */
+
+        #sobre-pag {
+
+            .boxesContainer {
+
+                .boxes {
+                    width: 45%;
+                }
+            }
+        }
+
+        /* #endregion */
+
+
+        /* #region PROJETOS PÁGINA */
+
+        #portfolio {
+
+            .container-full {
+
+                .portfolio-grid {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+        }
+
+
+        #projeto-adega {
+
+            .container-full {
+
+                .projeto-destaque {
+                    height: 450px;
+                }
+
+                .projeto-informacoes {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+
+                .projeto-galeria {
+
+                    .galeria-grid {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                }
+            }
+        }
+
+        /* #endregion */
+    }
+
+
+    /* #region FOOTER */
+
+    footer {
+
+        .footerContato {
+            right: 20px;
+        }
+    }
+
+    /* #endregion */
+}
+
+
+/* #endregion */
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 770px) {
+
+    /* #region HEADER */
+
+    header {
+        height: auto;
+
+        .container {
+            width: 95%;
+            min-height: 75px;
+            height: auto;
+
+            display: flex;
+            flex-wrap: wrap;
+
+            padding: 10px 15px;
+
+            position: relative;
+
+            .container {
+                width: 100%;
+            }
+
+            nav {
+                order: 3;
+
+                width: 100%;
+                flex: 1 0 100%;
+
+                display: none;
+
+                flex-direction: column;
+                align-items: stretch;
+                justify-content: center;
+
+                gap: 5px;
+
+                padding: 15px 0;
+
+                background-color: var(--cor-card);
+
+                border-top: 1px solid var(--cor-destaque);
+                border-radius: 0 0 15px 15px;
+            }
+
+            nav.ativo {
+                display: flex;
+            }
+
+            nav a {
+                width: 100%;
+                padding: 12px;
+
+                text-align: center;
+                font-size: 18px;
+            }
+
+            .header-botao {
+                margin-right: 0;
+                padding: 10px;
+            }
+        }
+    }
+
+
     .menu-toggle {
         display: block !important;
-        font-size: 30px;
-        background: none;
+
+        padding: 5px;
+
+        background: transparent;
         border: none;
+
+        color: var(--cor-brilho);
+
+        font-size: 30px;
+
         cursor: pointer;
+
         text-shadow: 0 0 10px var(--cor-destaque);
-        transition: all 0.4s ease;
+
+        transition: .4s;
     }
 
     .menu-toggle:hover {
         color: var(--cor-brilho);
-        transform: scale(1.05);
-        text-shadow: 0 0 5px var(--cor-destaque),
-            0 0 20px var(--cor-destaque),
-            0 0 20px var(--cor-destaque);
         transform: scale(1.08) rotate(-180deg);
-        filter: drop-shadow(0 0 12px #00e5ff);
+        filter: drop-shadow(0 0 12px var(--cor-brilho));
     }
 
+    /* #endregion */
+
+
     main {
-        #home .container-full {
-            .home-txt {
-                width: 100%;
-                text-align: center;
-                padding: 20px;
-                margin-top: 15%;
 
-                h1 {
-                    font-size: 28px;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                }
-            }
-        }
+        /* #region HOME */
 
-        #sobre {
-            height: auto;
-            min-height: auto;
-            padding: 40px 20px;
+        #home {
+
+            min-height: 750px;
 
             .container-full {
-                .sobre-txt {
+                width: 90%;
+
+                display: flex;
+                flex-direction: column;
+
+                justify-content: center;
+
+                gap: 30px;
+
+                .home-txt {
                     width: 100%;
-                    text-align: center;
+
+                    align-items: center;
+
+                    padding: 20px;
+
+                    margin-top: 100px;
+
+                    h1 {
+                        width: 100%;
+
+                        display: flex;
+                        flex-direction: column;
+
+                        align-items: center;
+                        justify-content: center;
+
+                        text-align: center;
+
+                        font-size: 38px;
+
+                        span {
+                            width: 100%;
+                            margin-left: 0;
+
+                            font-size: 22px;
+
+                            text-align: center;
+                            white-space: normal;
+                        }
+                    }
+
+                    p {
+                        width: 100%;
+
+                        font-size: 17px;
+
+                        line-height: 1.6;
+
+                        text-align: center;
+                    }
+                }
+
+                &::after {
+                    width: 100%;
+                    height: 250px;
+
+                    margin-right: 0;
+
+                    background-position: center;
                 }
             }
         }
 
+        /* #endregion */
+
+
+        /* #region SOBRE */
+
+        #sobre {
+
+            padding: 70px 0;
+
+            .container {
+                width: 90%;
+
+                display: flex;
+                flex-direction: column;
+
+                gap: 30px;
+
+                .sobre-imagem {
+                    width: 100%;
+                }
+
+                .textoSobre {
+                    width: 100%;
+
+                    h2 {
+                        font-size: 30px;
+                    }
+
+                    p {
+                        width: 100%;
+
+                        font-size: 16px;
+
+                        text-align: center;
+                    }
+                }
+
+                .sobre-pilares {
+                    width: 100%;
+
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    justify-content: center;
+
+                    span {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+
+        /* #endregion */
+
+
+        /* #region SERVIÇOS */
+
         #servicos {
+
+            padding: 70px 0;
+
+            .container {
+
+                .cabecalho-secao {
+
+                    .titulo {
+                        font-size: 30px;
+                    }
+
+                    .subtitulo-secao {
+                        width: 100%;
+                        font-size: 17px;
+                    }
+                }
+
+                .grid-servicos {
+
+                    .box {
+                        width: 280px;
+                        min-height: 250px;
+                    }
+                }
+            }
+
             swiper-container {
                 width: 100%;
                 padding-bottom: 30px;
             }
-
-            .box {
-                padding: 20px;
-                text-align: center;
-            }
         }
 
+        /* #endregion */
+
+
+        /* #region DIFERENCIAIS */
+
         #diferenciais {
+
+            padding: 70px 0;
+
+            .container {
+                width: 90%;
+            }
+
             .grid-diferenciais {
                 grid-template-columns: 1fr;
                 gap: 20px;
-                padding: 0 15px;
+            }
+
+            .card-diferencial {
+                height: 280px;
+            }
+
+            .card-frente,
+            .card-verso {
+                padding: 25px;
             }
         }
 
-        h1,
-        h2,
-        h3,
-        p,
-        a,
-        button {
-            max-width: 100%;
-            overflow-wrap: anywhere;
+        /* #endregion */
+
+
+        /* #region PROJETOS */
+
+        #projetos {
+
+            .container {
+                width: 90%;
+            }
+
+            .cabecalho-secao {
+
+                .titulo {
+                    font-size: 30px;
+                }
+
+                .subtitulo-secao {
+                    width: 100%;
+                    font-size: 17px;
+                }
+            }
+
+            .grid-projetos {
+                grid-template-columns: 1fr;
+            }
+
+            .botao-secao {
+                width: 60%;
+            }
+        }
+
+        /* #endregion */
+
+
+        /* #region COMO FUNCIONA */
+
+        #como-funciona {
+
+            padding: 70px 0;
+
+            .container {
+                width: 90%;
+            }
+
+            .grid-processo {
+                grid-template-columns: 1fr !important;
+                gap: 20px;
+            }
+
+            .processo-card {
+                height: 280px;
+            }
+
+            .botao-secao {
+                width: 60% !important;
+            }
+        }
+
+        /* #endregion */
+
+
+        /* #region CTA */
+
+        #cta {
+
+            padding: 70px 0;
+
+            .container {
+                width: 90%;
+                height: 350px;
+            }
+
+            .cta-content {
+
+                width: 90%;
+
+                h2 {
+                    font-size: 30px;
+                }
+
+                p {
+                    font-size: 20px;
+                }
+
+                .btn-cta {
+                    width: 70%;
+                }
+            }
+        }
+
+        /* #endregion */
+
+
+        /* #region SERVIÇOS PÁGINA */
+
+        .servico-conteudo {
+            width: 90%;
+            margin: 0 auto;
+
+            flex-direction: column;
+
+            .servico-texto {
+                width: 100%;
+            }
+        }
+
+
+        #landing-pages,
+        #catalogos {
+
+            .container-full {
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            .servico-texto {
+                width: 100% !important;
+            }
+        }
+
+
+        #integracoes {
+
+            .container-full {
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            .servicos-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        #manutencao {
+
+            .container-full {
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            .manutencao-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        #como-escolher {
+
+            .container-full {
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            .escolha-lista {
+
+                .escolha-item {
+                    width: 100%;
+
+                    grid-template-columns: 50px minmax(0, 1fr);
+
+                    gap: 15px;
+
+                    padding: 15px;
+
+                    span {
+                        grid-column: 2;
+
+                        justify-self: start;
+
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .servicos-cta {
+                margin: 40px 0;
+            }
+        }
+
+        /* #endregion */
+
+
+        /* #region CONTATO */
+
+        #contato {
+
+            min-height: auto;
+
+            padding: 120px 0 60px;
+
+            .container-full {
+
+                width: 90%;
+
+                display: flex;
+                flex-direction: column;
+
+                gap: 30px;
+
+                h1 {
+                    font-size: 32px;
+                }
+
+                p {
+                    margin-bottom: 20px;
+                    padding: 10px;
+                }
+
+                figure {
+                    order: -1;
+
+                    width: 100%;
+
+                    justify-content: center;
+
+                    img {
+                        width: 350px;
+                        max-width: 90%;
+
+                        margin-top: 0;
+                    }
+                }
+
+                form {
+                    width: 100%;
+                }
+            }
+        }
+
+        /* #endregion */
+
+
+        /* #region SOBRE PÁGINA */
+
+        #sobre-pag {
+
+            margin-top: 120px;
+
+            .sobre-txt {
+
+                width: 90%;
+
+                .texto1,
+                .texto2 {
+                    font-size: 18px;
+                    text-align: center;
+                }
+
+                .texto2 {
+
+                    span {
+                        font-size: 22px;
+                    }
+                }
+
+                h1 {
+                    font-size: 34px;
+                }
+            }
+
+            .boxesContainer {
+
+                width: 90%;
+                margin: 30px auto 0;
+
+                flex-direction: column;
+
+                .boxes {
+                    width: 100%;
+                }
+            }
+        }
+
+        /* #endregion */
+
+
+        /* #region PROCESSOS */
+
+        #processos {
+
+            margin-top: 100px;
+
+            .processos-intro {
+
+                width: 90%;
+
+                .titulo {
+                    font-size: 34px;
+                }
+
+                p {
+                    font-size: 17px;
+                }
+            }
+
+            .processos-lista {
+
+                width: 90%;
+
+                &::before {
+                    left: 25px;
+                }
+            }
+
+            .processo-item {
+                gap: 15px;
+            }
+        }
+
+
+        #entrega {
+
+            .titulo {
+                font-size: 34px;
+            }
+
+            .grid-diferenciais {
+                padding: 0 20px;
+            }
+
+            .card-diferencial {
+                max-width: 100%;
+                flex-basis: 100%;
+            }
+        }
+
+
+        #inf-cliente {
+
+            width: 90%;
+
+            .processos-intro {
+
+                .info {
+                    font-size: 34px;
+                }
+
+                p {
+                    font-size: 17px;
+                }
+            }
+
+            .cliente-lista {
+
+                ul {
+                    grid-template-columns: 1fr;
+                }
+            }
+        }
+
+        /* #endregion */
+
+
+        /* #region PROJETOS PÁGINA */
+
+        #projetos-hero {
+
+            padding: 120px 0 60px;
+
+            .container-full {
+
+                .titulo {
+                    font-size: 34px;
+                }
+
+                p {
+                    font-size: 17px;
+                }
+            }
+        }
+
+
+        #portfolio {
+
+            padding: 60px 0;
+
+            .container-full {
+
+                width: 90%;
+
+                .titulo {
+                    font-size: 32px;
+                }
+
+                .portfolio-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .portfolio-filtros {
+
+                    gap: 8px;
+
+                    button {
+                        padding: 9px 15px;
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+
+
+        #projeto-adega {
+
+            padding: 70px 0;
+
+            .container-full {
+
+                width: 90%;
+
+                .projeto-destaque {
+                    height: 350px;
+                }
+
+                .projeto-informacoes {
+                    grid-template-columns: 1fr;
+                }
+
+                .projeto-galeria {
+
+                    .galeria-grid {
+                        grid-template-columns: 1fr;
+                    }
+                }
+            }
+        }
+
+        /* #endregion */
+    }
+
+
+    /* #region FOOTER */
+
+    footer {
+
+        padding: 30px 20px;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 20px;
+
+        .footerLogo {
+            position: static;
+        }
+
+        .footerDireitos {
+            font-size: 14px;
+        }
+
+        .footerContato {
+            position: static;
+
+            transform: none;
+
+            text-align: center;
+
+            font-size: 14px;
         }
     }
+
+    /* #endregion */
 }
 
+
+/* #endregion */
+
+
+/* =========================================================
+   CELULAR
+   ========================================================= */
+
 @media (max-width: 480px) {
-    header .container {
-        gap: 10px;
+
+    body {
+        overflow-x: hidden;
     }
 
-    /* CORREÇÃO: Removidos os blocos que quebravam o comportamento em telas menores */
+    .container,
+    .container-full {
+        width: 92%;
+        max-width: 92%;
+    }
+
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+
+    /* #region HEADER */
+
+    header {
+
+        .container {
+            width: 94%;
+            margin-top: 10px;
+            border-radius: 15px;
+
+            padding: 8px 12px;
+
+            img {
+                width: 60px;
+            }
+        }
+
+        .container nav {
+
+            a {
+                font-size: 16px;
+            }
+        }
+
+        .header-botao {
+            padding: 8px;
+
+            a {
+                font-size: 13px;
+            }
+        }
+    }
+
+
+    .menu-toggle {
+        font-size: 26px;
+    }
+
+    /* #endregion */
+
 
     main {
-        padding: 40px 15px;
 
-        #home .container-full {
-            .home-txt h1 {
-                font-size: 24px;
+        /* #region HOME */
+
+        #home {
+
+            min-height: 720px;
+
+            .container-full {
+
+                .home-txt {
+
+                    margin-top: 80px;
+                    padding: 10px;
+
+                    h1 {
+                        font-size: 30px;
+
+                        span {
+                            font-size: 18px;
+                            width: 100%;
+                        }
+                    }
+
+                    p {
+                        margin: 20px 0;
+
+                        font-size: 16px;
+
+                        line-height: 1.5;
+                    }
+                }
+
+                .home-botoes {
+
+                    flex-direction: column;
+
+                    gap: 12px;
+
+                    a {
+                        width: 100%;
+                        padding: 12px;
+                    }
+                }
+
+                &::after {
+                    height: 200px;
+                }
+            }
+        }
+
+        /* #endregion */
+
+
+        /* #region SOBRE */
+
+        #sobre {
+
+            padding: 60px 0;
+
+            .container {
+
+                .textoSobre {
+
+                    h2 {
+                        font-size: 26px;
+                    }
+
+                    p {
+                        font-size: 15px;
+                        line-height: 1.6;
+                    }
+                }
+
+                .sobre-pilares {
+
+                    gap: 8px;
+
+                    span {
+                        width: 100%;
+                        padding: 8px 10px;
+
+                        font-size: 12px;
+                    }
+                }
+
+                .btn-secao {
+                    width: 100%;
+                }
+            }
+        }
+
+        /* #endregion */
+
+
+        /* #region SERVIÇOS */
+
+        #servicos {
+
+            padding: 60px 0;
+
+            .container {
+
+                .cabecalho-secao {
+
+                    .titulo {
+                        font-size: 27px;
+                    }
+
+                    .subtitulo-secao {
+                        font-size: 16px;
+                        margin-bottom: 25px;
+                    }
+                }
+
+                .grid-servicos {
+
+                    gap: 15px;
+
+                    .box {
+                        width: 100%;
+                        min-height: 230px;
+
+                        padding: 20px;
+
+                        border-radius: 30px;
+                    }
+                }
+            }
+        }
+
+        /* #endregion */
+
+
+        /* #region DIFERENCIAIS */
+
+        #diferenciais {
+
+            padding: 60px 0;
+
+            .container {
+                width: 92%;
+            }
+
+            .titulo {
+                font-size: 28px;
+            }
+
+            .subtitulo-secao {
+                font-size: 16px;
+            }
+
+            .grid-diferenciais {
+                padding: 0;
+            }
+
+            .card-diferencial {
+                height: 280px;
+            }
+
+            .card-frente,
+            .card-verso {
+                padding: 20px;
+            }
+
+            h3 {
+                font-size: 21px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+        }
+
+        /* #endregion */
+
+
+        /* #region PROJETOS */
+
+        #projetos {
+
+            .container {
+                width: 92%;
+            }
+
+            .cabecalho-secao {
+
+                .titulo {
+                    font-size: 27px;
+                }
+
+                .subtitulo-secao {
+                    font-size: 16px;
+                }
+            }
+
+            .grid-projetos {
+
+                .projeto-imagem {
+                    height: 190px;
+                }
+            }
+
+            .botao-secao {
+                width: 100%;
+            }
+        }
+
+        /* #endregion */
+
+
+        /* #region COMO FUNCIONA */
+
+        #como-funciona {
+
+            padding: 60px 0;
+
+            .container {
+                width: 92%;
+            }
+
+            .cabecalho-secao {
+
+                .titulo {
+                    font-size: 27px;
+                }
+            }
+
+            .grid-processo {
+                gap: 15px;
+            }
+
+            .processo-card {
+                height: 270px;
+            }
+
+            .processo-frente,
+            .processo-verso {
+                padding: 20px;
+            }
+
+            .botao-secao {
+                width: 100% !important;
+            }
+        }
+
+        /* #endregion */
+
+
+        /* #region CTA */
+
+        #cta {
+
+            padding: 60px 0;
+
+            .container {
+                width: 92%;
+                height: auto;
+
+                min-height: 350px;
+
+                padding: 35px 15px;
+            }
+
+            .cta-content {
+
+                width: 100%;
+
+                .titulo-pequeno {
+                    font-size: 13px;
+                }
+
+                h2 {
+                    font-size: 27px;
+                }
+
+                p {
+                    font-size: 18px;
+                }
+
+                .btn-cta {
+                    width: 100%;
+                    padding: 13px 15px;
+                }
+            }
+        }
+
+        /* #endregion */
+
+
+        /* #region PÁGINA DE SERVIÇOS */
+
+        .servico-conteudo {
+
+            width: 92%;
+
+            .servico-texto {
+                width: 100%;
+
+                padding: 20px;
+
+                h3 {
+                    font-size: 20px;
+                }
+
+                p {
+                    font-size: 15px;
+                }
+
+                li {
+                    font-size: 14px;
+                }
+            }
+        }
+
+
+        #sites-institucionais,
+        #landing-pages,
+        #catalogos,
+        #integracoes,
+        #manutencao,
+        #como-escolher {
+
+            padding-top: 70px;
+
+            .container-full {
+                width: 92%;
+                max-width: 92%;
+                margin: 0 auto;
+            }
+        }
+
+
+        #integracoes {
+
+            .servicos-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+
+                .servico-card {
+
+                    min-height: 180px;
+
+                    padding: 25px 15px;
+
+                    i {
+                        font-size: 30px;
+                    }
+
+                    h3 {
+                        font-size: 18px;
+                    }
+
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+
+        #manutencao {
+
+            .manutencao-grid {
+
+                grid-template-columns: 1fr;
+
+                gap: 15px;
+
+                article {
+
+                    min-height: 180px;
+
+                    padding: 20px 15px;
+
+                    i {
+                        font-size: 30px;
+                    }
+
+                    h3 {
+                        font-size: 18px;
+                    }
+
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+
+        #como-escolher {
+
+            .escolha-lista {
+
+                .escolha-item {
+
+                    width: 100%;
+
+                    display: flex;
+                    flex-direction: column;
+
+                    align-items: center;
+
+                    text-align: center;
+
+                    padding: 20px;
+
+                    div {
+                        width: 45px;
+                        height: 45px;
+                    }
+
+                    p {
+                        font-size: 16px;
+                        text-align: center;
+                    }
+
+                    span {
+                        font-size: 15px;
+                    }
+                }
+            }
+
+            .servicos-cta {
+
+                margin: 30px 0;
+                padding: 20px 15px;
+
+                h2 {
+                    font-size: 25px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+
+                .btn-cta {
+                    width: 100%;
+                    font-size: 17px;
+                }
+            }
+        }
+
+        /* #endregion */
+
+
+        /* #region CONTATO */
+
+        #contato {
+
+            padding: 120px 0 50px;
+
+            .container-full {
+
+                width: 92%;
+
+                h1 {
+                    font-size: 28px;
+                }
+
+                p {
+                    font-size: 15px;
+                    line-height: 1.5;
+                }
+
+                figure {
+
+                    img {
+                        width: 280px;
+                    }
+                }
+
+                form {
+
+                    gap: 15px;
+
+                    .campo {
+
+                        gap: 6px;
+
+                        input,
+                        textarea {
+                            padding: 12px;
+
+                            font-size: 15px;
+                        }
+                    }
+
+                    button {
+                        width: 100%;
+                        padding: 13px;
+                    }
+                }
+            }
+        }
+
+        /* #endregion */
+
+
+        /* #region SOBRE PÁGINA */
+
+        #sobre-pag {
+
+            margin-top: 110px;
+
+            .sobre-txt {
+
+                width: 92%;
+                margin-bottom: 40px;
+
+                h1 {
+                    font-size: 30px;
+                }
+
+                .texto1,
+                .texto2 {
+                    font-size: 16px;
+                    line-height: 1.6;
+                }
+
+                .texto2 {
+
+                    span {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .boxesContainer {
+
+                width: 92%;
+
+                .boxes {
+
+                    width: 100%;
+
+                    padding: 25px 15px;
+
+                    p {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+        /* #endregion */
+
+
+        /* #region PROCESSOS */
+
+        #processos {
+
+            margin-top: 90px;
+            padding: 50px 0 60px;
+
+            .processos-intro {
+
+                width: 92%;
+                margin-bottom: 50px;
+
+                .titulo {
+                    font-size: 30px;
+                }
+
+                p {
+                    font-size: 16px;
+                    line-height: 1.6;
+                }
+            }
+
+            .processos-lista {
+
+                width: 92%;
+
+                gap: 30px;
+
+                &::before {
+                    left: 20px;
+                }
+            }
+
+            .processo-item {
+
+                gap: 12px;
+            }
+
+            .processo-numero {
+
+                flex: 0 0 42px;
+
+                width: 42px;
+                height: 42px;
+
+                border-radius: 10px;
 
                 span {
-                    margin-left: 0;
-                    padding: 5px 0;
+                    font-size: 13px;
+                }
+            }
+
+            .processo-conteudo {
+
+                padding-top: 0;
+            }
+        }
+
+
+        #entrega {
+
+            padding: 50px 0 60px;
+
+            .titulo {
+                font-size: 30px;
+            }
+
+            p {
+                width: 92%;
+                font-size: 16px;
+                line-height: 1.6;
+            }
+
+            .grid-diferenciais {
+
+                padding: 0 15px;
+
+                gap: 20px;
+            }
+
+            .card-diferencial {
+
+                width: 100%;
+                max-width: 100%;
+
+                height: 280px;
+            }
+        }
+
+
+        #inf-cliente {
+
+            width: 92%;
+
+            padding: 50px 0;
+
+            .processos-intro {
+
+                .info {
+                    font-size: 30px;
+                }
+
+                p {
+                    font-size: 16px;
+                }
+            }
+
+            .cliente-lista {
+
+                ul {
+                    grid-template-columns: 1fr;
+                }
+
+                li {
+                    font-size: 13px;
+                }
+            }
+        }
+
+
+        #p-final {
+
+            padding: 60px 0;
+
+            .container-full {
+                padding: 0 15px;
+            }
+
+            .titulo {
+
+                h2 {
+                    font-size: 28px;
+                }
+            }
+
+            .p-final-intro {
+                font-size: 16px;
+                margin-bottom: 35px;
+            }
+
+            .pos-publicacao {
+
+                grid-template-columns: 1fr;
+
+                gap: 20px;
+
+                article {
+                    padding: 30px 20px;
+                }
+            }
+        }
+
+        /* #endregion */
+
+
+        /* #region PORTFÓLIO */
+
+        #projetos-hero {
+
+            padding: 110px 0 50px;
+
+            .container-full {
+
+                width: 92%;
+
+                .titulo {
+                    font-size: 30px;
+                }
+
+                p {
+                    font-size: 16px;
+                    line-height: 1.6;
+                }
+            }
+        }
+
+
+        #portfolio {
+
+            padding: 50px 0;
+
+            .container-full {
+
+                width: 92%;
+
+                .titulo {
+                    font-size: 28px;
+                }
+
+                .portfolio-intro {
+                    font-size: 16px;
+                }
+
+                .portfolio-filtros {
+
+                    width: 100%;
+
+                    button {
+                        padding: 8px 13px;
+                        font-size: 12px;
+                    }
+                }
+
+                .portfolio-grid {
+
+                    grid-template-columns: 1fr;
+
+                    gap: 20px;
+
+                    .projeto-card {
+
+                        .projeto-imagem {
+                            height: 200px;
+                        }
+
+                        .projeto-info {
+                            padding: 20px;
+
+                            h3 {
+                                font-size: 20px;
+                            }
+
+                            p {
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        #projeto-adega {
+
+            padding: 60px 0;
+
+            .container-full {
+
+                width: 92%;
+
+                .projeto-detalhe-intro {
+
+                    margin-bottom: 35px;
+
+                    >span {
+                        font-size: 11px;
+                    }
+
+                    .titulo {
+                        font-size: 28px;
+                    }
+
+                    p {
+                        font-size: 15px;
+                    }
+                }
+
+                .projeto-destaque {
+
+                    height: 230px;
+
+                    margin-bottom: 40px;
+
+                    border-radius: 12px;
+                }
+
+                .projeto-informacoes {
+
+                    grid-template-columns: 1fr;
+
+                    gap: 15px;
+
+                    margin-bottom: 45px;
+
+                    article {
+
+                        padding: 22px;
+
+                        h3 {
+                            font-size: 18px;
+                        }
+
+                        p {
+                            font-size: 15px;
+                        }
+                    }
+                }
+
+                .projeto-tecnologias {
+
+                    margin-bottom: 45px;
+
+                    h3 {
+                        font-size: 20px;
+                    }
+
+                    .tecnologias-lista {
+
+                        gap: 8px;
+
+                        span {
+                            padding: 7px 13px;
+                            font-size: 12px;
+                        }
+                    }
+                }
+
+                .projeto-galeria {
+
+                    >h3 {
+                        font-size: 21px;
+                    }
+
+                    .galeria-grid {
+
+                        grid-template-columns: 1fr;
+
+                        gap: 15px;
+
+                        img {
+                            height: 220px;
+                        }
+                    }
+                }
+            }
+        }
+
+        /* #endregion */
+    }
+
+
+    /* #region FOOTER */
+
+    footer {
+
+        padding: 25px 15px;
+
+        gap: 15px;
+
+        .footerLogo {
+
+            img {
+                width: 65px;
+            }
+        }
+
+        .footerDireitos {
+            font-size: 12px;
+        }
+
+        .footerContato {
+            font-size: 12px;
+        }
+    }
+
+    /* #endregion */
+}
+
+
+/* #endregion */
+
+
+/* =========================================================
+   TELAS MUITO PEQUENAS
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    header {
+
+        .container {
+
+            img {
+                width: 50px;
+            }
+
+            .header-botao {
+                padding: 7px;
+
+                a {
+                    font-size: 11px;
+                }
+            }
+        }
+    }
+
+
+    main {
+
+        #home {
+
+            min-height: 700px;
+
+            .container-full {
+
+                .home-txt {
+
+                    h1 {
+                        font-size: 26px;
+
+                        span {
+                            font-size: 16px;
+                        }
+                    }
+
+                    p {
+                        font-size: 14px;
+                    }
+                }
+
+                &::after {
+                    height: 170px;
+                }
+            }
+        }
+
+
+        #diferenciais {
+
+            .card-diferencial {
+                height: 260px;
+            }
+
+            .card-frente,
+            .card-verso {
+                padding: 15px;
+            }
+        }
+
+
+        #como-funciona {
+
+            .processo-card {
+                height: 250px;
+            }
+        }
+
+
+        #cta {
+
+            .container {
+                min-height: 330px;
+            }
+
+            .cta-content {
+
+                h2 {
+                    font-size: 24px;
+                }
+
+                p {
+                    font-size: 16px;
                 }
             }
         }
     }
 }
-.menu-toggle {
-    display: none; 
-}
+
+
+/* #endregion */
